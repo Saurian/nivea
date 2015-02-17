@@ -1,0 +1,49 @@
+{**
+ * @param string   $basePath web base path
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{ifset #title}{include title|striptags}{/ifset}</title>
+	<meta name="description" content="{$description|striptags}" n:ifset="$description" />
+	<meta name="robots" content="{$robots}" n:ifset="$robots" />
+	<meta content="{$webLocale}" http-equiv="Content-language" n:ifset="$webLocale">
+	<meta content="{$keywords}" name="keywords" n:ifset="$keywords">
+	<meta content="Pixman s.r.o." name="author">
+	<link rel="shortcut icon" href="{$basePath}/favicon.png">
+	{control css}
+
+	<!--[if gte IE 9]>
+		<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/ie9.css">
+	<![endif]-->
+
+	<script src="{$basePath}/js/jquery.1.8.2.min.js"></script>
+	{block head}{/block}
+</head>
+
+<body n:class="$name">
+	<script> document.documentElement.className+=' js' </script>
+
+	<div class="container">
+		<div n:foreach="$flashes as $flash" class="flash error-messages {$flash->type}"><p class="message">{$flash->message}</p></div>
+		<div class="content">
+			{include content}
+			<div class="error-messages"><p class="message"></p></div>
+			{block popup}{/block}
+		</div>
+	</div>
+
+	{block scripts}
+		<script src="{$basePath}/js/netteForms.js"></script>
+		<script src="{$basePath}/js/select2.js"></script>
+		<script src="{$basePath}/js/placeholders.min.js"></script>
+		<script src="{$basePath}/js/application.js"></script>
+		<script n:if="$omnitureIframe" src="http://www.nivea.{$locale}/js/nivea_omniture_iframe.js"></script>
+		<script n:if="$omnitureIframe" type="text/javascript">Omniture.trackSubPageView('{!$page}');</script>
+		<script n:if="$omnitureIframe" src="{$basePath}/js/track.js"></script>
+	{/block}
+</body>
+</html>

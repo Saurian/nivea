@@ -1,0 +1,71 @@
+email:
+	sender: 'Nivea soutěž <nivea@info.com>'
+	header: 'Zapomenuté heslo'
+
+# --- title ---
+title_homepage: "NIVEA Spevňujúce mlieko do sprchy"
+title_registration: "NIVEA Registrácia"
+title_děkujeme: 'ĎAKUJEME, VAŠE ÚDAJE BOLI ÚSPEŠNE ULOŽENÉ.'
+
+# --- homepage ---
+homepage:
+úvodní_popis: "OTESTUJTE NOVINKU"
+text1: "NIVEA Spevňujúce mlieko do sprchy"
+text2: "Túžite po pevnej a pružnej pokožke? Ponáhľate sa, ale napriek tomu sa o seba chcete starať a svoju pokožku účinne spevňovať?"
+text3: "Máme pre Vás jednoduché riešenie – zapojte sa do nášho testovania<br> a využite jedinečnú príležitosť vyskúšať nové NIVEA Spevňujúce telové mlieko do sprchy s perličkami koenzýmu Q10."
+text4: "Buďte jedna zo <strong>100 testujúcich žien</strong>. Vyskúšajte novinku Spevňujúce telové mlieko do sprchy a užite si pohodlnú cestu k pevnej a pružnej pokožke!"
+text5: "Pre ďalších 5.000 z vás sú pripravené vzorky NIVEA Spevňujúceho telového mlieka do sprchy."
+chci_testovat: "CHCEM TESTOVAŤ"
+přihláška_do: "Do testovania sa môžete prihlásiť od 30. 1. do 8. 2. 2015."
+úplná_pravidla: "ÚPLNÉ PRAVIDLÁ"
+url_pravidla: "http://www.nivea.sk/Tipy-and-rady/ext/sk-SK/2011_06_vyherci_info"
+
+
+# --- registration ---
+registrace: Registrácia
+text_registrace1: "Ak sa chcete zapojiť do testovania, vyplňte, prosím, krátky formulár:"
+používáte_výrobky: "Používate výrobky na spevnenie pokožky?"
+povinná_pole: "Polia označené * sú povinné.<br>Do testovania sa môžete prihlásiť od 30. 1. do 8. 2. 2015."
+
+
+zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: 'Zaškrtnutím tohto políčka a odoslaním formulára dobrovoľne súhlasím, že poskytnuté údaje v rozsahu formulára budú spracované pre účely vyhodnotenia súťaže. V prípade, že udelím súhlas na zasielanie obchodných informácií - informácií e-mailom - pozri. druhé políčko súhlasu, tak budú uvedené údaje spracované i pre účely stanovené v bode 2. %politiky_ochrany_soukromí%. Potvrdzujem, že som si starostlivo prečítal/a podmienky spracovania údajov podľa Politiky ochrany súkromia a %pravidla_soutěže% a súhlasím s nimi. Súhlas udeľujem na dobu do jeho odvolania.'
+
+
+
+politiky_ochrany_soukromí: "Politiky ochrany súkromia"
+pravidla_soutěže: "Pravidla"
+potvrzuji_pečlivé_pročtení: "a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
+a: "a"
+zpet: "späť"
+datum_narozeni: "dátum narodenia"
+
+email_již_existuje: 'Vámi zadaná emailová adresa již existuje'
+email_nenalezen: 'e-mail nebol nájdený'
+email_send: 'e-mail bol odoslaný'
+email_fail: 'e-mail sa nepodarilo odoslať'
+
+# --- Poděkování ---
+děkujeme: ĎAKUJEME
+udaje_uloženy: "Vaše údaje boli úspešne uložené."
+odesílací_informace: "V prípade, že budete vybraná na testovanie, budeme Vás kontaktovať na e-mail uvedený pri registrácii."
+děkující_titulek: "OBJAVTE ĎALŠIE VARIANTY TELOVÉHO MLIEKA DO SPRCHY"
+děkující_popisek: "Nový ľahký spôsob starostlivosti<br> o pokožku si môžete užiť hneď<br> v niekoľkých voňavých variantoch."
+děkujeme_pokračovat: "POKRAČOVAŤ"
+url_pokračovat: "http://www.nivea.sk/Vyrobky/Starostlivost-o-telo/Typ-vyrobku/Telove-mlieko-do-sprchy"
+
+
+# --- flashes ---
+vámi zadaná emailová adresa již existuje: "Vámi zadaná emailová adresa již existuje"
+
+
+# --- errors ---
+your browser sent a request that this server could not understand or process.: "Your browser sent a request that this server could not understand or process."
+oops: "Oops"
+page Not Found: "Page Not Found"
+the page you requested could not be found...: "The page you requested could not be found. It is possible that the address is incorrect, or that the page no longer exists. Please use a search engine to find what you are looking for."
+server Error: "Server Error"
+the server encountered an internal error: "'We're sorry! The server encountered an internal error and was unable to complete your request. Please try again later."
+
+# --- links ---
+rules_url: "http://www.nivea.sk/Tipy-and-rady/ext/sk-SK/2011_06_vyherci_info"
+policy_policy_url: "http://www.nivea.sk/O-nas/Politika-ochrany-sukromia"

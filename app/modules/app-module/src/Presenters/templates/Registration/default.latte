@@ -1,0 +1,107 @@
+{block title}{_title_registration}{/block}
+{block content}
+<h1><strong>{_úvodní_popis}</strong>{_registrace}</h1>
+
+<div n:class="$locale == 'unknown' ? long-container">
+	<div n:class="$locale == 'unknown' ? long-content">
+		<p><strong>{!_text_registrace1}</strong></p>
+	</div>
+</div>
+
+<div class="form-block">
+
+	{form registrationForm}
+		<fieldset class="register">
+
+			<div class="clearfix form-row">
+				{foreach $form['gender']->items as $key => $label}
+					<div class="row-col">
+						<div class="block-inline no-margin">
+							<input n:name="gender:$key">
+							<label n:name="gender:$key">{_forms.registrationForm.$label}</label>
+						</div>
+					</div>
+				{/foreach}
+
+				<div class="row-col">
+					{input firstname}
+				</div>
+				<div class="row-col">
+					{input lastname}
+				</div>
+
+			</div>
+
+			<div class="clearfix form-row">
+				<div class="row-col half vbottom">
+					{input email}
+				</div>
+
+				<div class="row-col birth vtop half">
+					<label class="inline-item no-margin" for=""><span class="btn-sm">{_datum_narozeni}</span></label>
+					<div class="birth-select">
+						{if $locale == 'hu'}
+						{input year}
+						{input month}
+						{input day}
+						{else}
+						{input day}
+						{input month}
+						{input year}
+						{/if}
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix form-row">
+				{if $locale == 'hu'}
+				<div class="row-col vtop half">
+					{input zip}
+					{input city}
+				</div>
+
+				<div class="row-col half">
+					{input street}
+					{input strno}
+				</div>
+				{else}
+				<div class="row-col half">
+					{input street}
+					{input strno}
+				</div>
+
+				<div class="row-col birth vtop half">
+					{input zip}
+					{input city}
+				</div>
+				{/if}
+			</div>
+
+			<div class="clearfix">
+				<p>{!_povinná_pole}</p>
+			</div>
+
+			<div n:class="$locale == 'hu' ? 'clearfix checkblock blue' : 'clearfix checkblock'">
+				<label>
+					{capture $rule}<a target="_blank" class="track-external" data-url="{_rules_url}" href="{_rules_url}">{_pravidla_soutěže}</a>{/capture}
+					{capture $policy}<a target="_blank" class="track-external" data-url="{_policy_policy_url}" href="{_policy_policy_url}">{_politiky_ochrany_soukromí}</a>{/capture}
+
+					<input n:name="privacy">{!_zaškrtnutím_tohoto_políčka_a_odesláním_formuláře, null, [
+					'politiky_ochrany_soukromí'=>$policy,
+					'pravidla_soutěže'=>$rule,
+					]}
+				</label>
+			</div>
+			<div n:class="$locale == 'hu' ? 'clearfix checkblock blue' : 'clearfix checkblock'">
+				{input newsletter}
+				{!_'forms.registrationForm.posílat_newsletter'}
+			</div>
+
+			{input send}
+
+			<a n:href="Homepage:" class="button-secondary back clearfix track-btn" data-name="back-click">{_zpet}</a>
+		</fieldset>
+	{/form}
+
+</div>
+

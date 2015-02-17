@@ -1,0 +1,66 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+parameters:
+	lang: sk
+	contest:
+		omnitureIframe: false
+		test: true
+		registerFrom: 2015-02-08 # ← datum registrace včetně
+		registerTo: 2016-02-18 # ← datum registrace včetně
+		transaction:
+			name: 2015_02_q10plus
+			system: ProCampaign
+			url: "http://news.nivea.%lang%/ProCampaignAPI.aspx"
+			send: true
+
+		email:
+			passwordChars: 6
+			sender: 'Nivea soutěž <nivea@info.com>'
+			header: 'Zapomenuté heslo'
+
+php:
+	date.timezone: Europe/Prague
+
+nette:
+	session:
+		autoStart: smart
+		save_path: %tempDir%/sessions
+
+	application:
+		mapping:
+			*: App\*Module\Presenters\*Presenter
+
+	debugger:
+		email: 'pavel.paulik@seznam.cz'
+
+
+services:
+	wlCssFilter: WebLoader\Filter\CssUrlsFilter(%wwwDir%)
+	cacheStorage: Nette\Caching\Storages\MemoryStorage
+
+webloader:
+	css:
+		default:
+			files:
+				- {files: ["*.css"], in: %wwwDir%/css} ## Nette\Utils\Finder support
+
+extensions:
+	translation: Kdyby\Translation\DI\TranslationExtension
+	console: Kdyby\Console\DI\ConsoleExtension
+	events: Kdyby\Events\DI\EventsExtension
+	annotations: Kdyby\Annotations\DI\AnnotationsExtension
+	doctrine: Kdyby\Doctrine\DI\OrmExtension
+	webloader: WebLoader\Nette\Extension
+	modules: Flame\Modules\DI\ModulesExtension
+	doctrineForms: CmsModule\Doctrine\DI\FormsExtension
+	front: AppModule\DI\AppExtension
+
+translation:
+	debugger: on
+	default: %lang%
+	whitelist: [cs, sk, hu]
+	fallback: [cs_CZ, cs]

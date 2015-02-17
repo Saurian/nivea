@@ -1,0 +1,113 @@
+nivea - Vánoční soutěž: "NIVEA - Adventi nyereményjáték"
+
+# --- homepage ---
+úvodní_popis: 'PRÓBÁLD KI A LEGÚJABB TERMÉKÜNKET!'
+text1: "NIVEA Q10Plus Zuhanyzás Közbeni Bőrfeszesítő Testápoló"
+text2: 'Feszes és rugalmas bőrre vágysz? Elfoglalt vagy, sok a dolgod - mégis szeretnél törődni magaddal, és hatékony bőrfeszesítő módszert keresel? '
+text3: "Mi egyszerűen megoldjuk a kérdést! Ragadd meg a lehetőséget, vegyél részt terméktesztünkben, és próbáld ki az új NIVEA Q10Plus Zuhanyzás Közbeni Bőrfeszesítő Testápolót Q10 koenzim gyöngyökkel!"
+text4: "Legyél a <strong>100 női tesztelő egyike</strong>, akik kipróbálhatják az új NIVEA Q10Plus Zuhanyzás Közbeni Bőrfeszesítő testápolót, és élvezd a sima, feszes és rugalmas bőr élményét!"
+text5: "További 5000 jelentkezőnek pedig NIVEA Q10Plus Zuhanyzás Közbeni Bőrfeszesítő testápoló termékmintát küldünk, hogy minél többen ki tudjátok próbálni a terméket."
+chci_testovat: "SZERETNÉM KIPRÓBÁLNI!"
+přihláška_do: "A tesztelésre 2015. január 30-tól 2015. február 8-ig jelentkezhetsz."
+úplná_pravidla: "RÉSZLETES RÉSZVÉTELI FELTÉTELEK"
+url_pravidla: "http://www.nivea.hu/A-NIVEA-vilaga/ext/hu-HU/nivea_games_and_rules"
+
+
+# --- title ---
+title_homepage: "NIVEA Q10Plus Zuhanyzás Közebni Bőrfeszesítő Testápoló"
+title_registration: "NIVEA regisztráció"
+title_děkujeme: "KÖSZÖNJÜK, A MEGADOTT ADATOKAT SIKERESEN ELMENTETTÜK!"
+
+
+přejete si zapálit svou další svíčku: "Szeretnéd meggyújtani Te a következő gyertyát"
+přihlašte se: "Jelentkezz be"
+přihlásit se: "Bejelentkezés"
+přihlášení: "Bejelentkezés"
+přihlásit přes facebook: "Bejelentkezés Facebook-on keresztül"
+ztracené_heslo: "Új jelszó igénylése"
+rozsviťte si: "Gyújtsd meg a"
+nivea vánoce a vyhrajte: "NIVEA adventi koszorún a gyertyát és nyerj"
+facebook logged: "Facebook-on keresztül jelentkeztél be"
+tady: itt található
+soutěž probíhá od 30. 11. do 24. 12. 2014...: "A nyereményjáték időtartama: 2014. 11.30. és 2014.12.24. között. A  teljes játékszabály "
+
+zastavte se s námi na chvíli...: "Állj meg velünk egy rövid időre, és a karácsony előtti hét mindegyikén gyújts meg egy adventi gyertyát."
+vyhrajte dárkové balíčky NIVEA...: "Nyerd meg az egyedi NIVEA illatú gyertyát vagy a NIVEA ajándékcsomag egyikét"
+s originální NIVEA vuní: "Neked és partnered részére!"
+ 
+pokračovat na soutěž: "Tovább"
+
+pole označená * jsou povinná: "A *-al jelölt mezők kitöltése kötelező"
+soutěž_probíhá_od-do: "A nyereményjáték időtartama: 2014. 11.30. és 2014.12.24."
+úplná pravidla soutěže naleznete: "A  teljes játékszabály "
+nejste zaregistrován?: "Nem regisztráltál még?"
+klikněte zde pro registraci a vyhrajte: "A regisztrációhoz kattints ide, és nyerj!"
+
+
+# --- registration ---
+registrace: REGISZTRÁCIÓ
+text_registrace1: 'Ha szeretnél részt venni a tesztelésben, kérjük, add meg az alábbi adataidat! Kérjük, hogy mielőtt véglegesíted a jelentkezésedet, ellenőrizd le az adataidat és a postázási címet, hogy nyereményed biztosan célba érjen! *<br><br>*Olyan postai címet adj meg, ahová a nyereményedet szeretnéd, hogy kézbesítsük.'
+používáte_výrobky: 'Használsz bármilyen bőrfeszesítő terméket?'
+povinná_pole: "A *-al jelölt mezők kitöltése kötelező"
+
+zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: 'A jelölőnégyzet bejelölésével és az adataim elküldésével önkéntesen hozzájárulok a fenti információk feldolgozásához a promóciós tesztben való részvétel céljából és vonatkozásában. Amennyiben hozzájárulásomat adom ahhoz, hogy a Beiersdorf Kft. részemre e-mail útján kereskedelmi ajánlatokat és információkat küldjön (lásd a második hozzájárulás mezőt), tudomásul veszem, hogy az általam megadott adatok feldolgozása is az Adatkezelési Irányelvek 2. pontjában felsorolt célokra történik. Kijelentem, hogy alaposan elolvastam és megértettem az Adatkezelési Irányelveknek megfelelő adatkezelési feltételeket, a Játékszabályzatot és ezeket elfogadom. Hozzájárulásom visszavonásig érvényes.'
+politiky_ochrany_soukromí: "Politiky ochrany soukromí"
+pravidla_soutěže: "Pravidla soutěže"
+potvrzuji_pečlivé_pročtení: "a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
+a: "a"
+zpet: "vissza"
+datum_narozeni: "születési idő"
+
+email_již_existuje: 'A megadott e-mail cím már létezik.'
+email_nenalezen: 'az e-mail nem található’'
+email_send: 'az e-mail küldése sikeres volt'
+email_fail: 'az e-mail küldése sikertelen volt'
+
+
+
+
+
+zaregistrujte_se: "Regisztráció"
+popis_registrace: ""
+popis_registrace2: "Kérjük, töltsd ki a regisztráláshoz szükséges kérdőívet, és máris részt vehetsz az  egyedi kivitelezésű NIVEA gyertyáért folyó játékban. A NIVEA ajándékcsomag nyerteseit azon regisztrálók között kerül kisorsolásra, akik mind a 4 adventi gyertyát sikeresen meggyújtották."
+popis_registrace3: "A játék következő fordulójakor elegendő csak az e-mail címet és a jelszót megadni."
+propojit s facebookem: "Bejelentkezés Facebook-on keresztül"
+dokončit: "Meggyújtom a következő gyertyát!"
+akce probíhá od 30.11.2014 do 24.12.2014: "A nyereményjáték időtartama: 2014. 11.30. és 2014.12.27. között.<br>A nyertesek soroslása 2015. január 5-én 11:00 órakor les"
+vaše udaje byly uspěšně uloženy: "AZ ÁLTALAD MEGADOTT ADATOKAT SIKERESEN ELMENTETTÜK!"
+v případě výhry vás budeme kontaktovat na e-mail uvedený ve vaší registraci.: "Amennyiben a szerencsés nyertesek között leszel, a regisztrációkor megadott e-mail címen felvesszük veled a kapcsolatot!"
+politiky ochrany soukromí: ""
+potvrzuji že jsem si pečlivě pročetl...: ""
+pravidla soutěže: ""
+souhlas uděluji na dobu do jeho odvolání.: ""
+
+
+# --- Poděkování ---
+děkujeme: KÖSZÖNJÜK!
+udaje_uloženy: "Sikeresen regisztráltál!"
+odesílací_informace: "Amennyiben a szerencsés tesztelők közé bekerülsz, a regisztráció során megadott e-mail címen fogunk értesíteni."
+děkující_titulek: "FEDEZD FEL A TÖBBI ZUHANYZÁS KÖZBENI TESTÁPOLÓT IS!"
+děkující_popisek: "Válassz a sokféle illat közül, és hozz ki még többet a bőrápolás új és különleges módjából!"
+děkujeme_pokračovat: "TOVÁBB"
+url_pokračovat: "http://www.nivea.hu/Termekek/Testapolas/in-shower-body-moisturizers"
+
+
+# --- flashes ---
+facebook authentication failed: "Probléma a Facebook kapcsolattal."
+email from facebook account not found: "A fiók párosításához szükséges Facebook e-mail nem található."
+facebook account not found: "A Facebook fiók nem ltalálható."
+facebook authentication failed hard: "Sorry bro, facebook authentication failed hard."
+vámi zadaná emailová adresa již existuje: "A megadott e-mail cím már létezik."
+
+
+# --- errors ---
+your browser sent a request that this server could not understand or process.: "Your browser sent a request that this server could not understand or process."
+oops: "Oops"
+page Not Found: "Page Not Found"
+the page you requested could not be found...: "The page you requested could not be found. It is possible that the address is incorrect, or that the page no longer exists. Please use a search engine to find what you are looking for."
+server Error: "Server Error"
+the server encountered an internal error: "'We're sorry! The server encountered an internal error and was unable to complete your request. Please try again later."
+
+# --- links ---
+rules_url: "http://www.nivea.hu/A-NIVEA-vilaga/ext/hu-HU/nivea_games_and_rules"
+policy_policy_url: "http://www.nivea.hu/Rolunk/Adatvedelmi-nyilatkozat"

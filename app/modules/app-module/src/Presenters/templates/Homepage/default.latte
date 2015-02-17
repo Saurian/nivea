@@ -1,0 +1,26 @@
+{block title}{_title_homepage}{/block}
+{block content}
+
+<h1 class="pink"><strong>{!_úvodní_popis}</strong>{!_text1}</h1>
+<p class="no-margin"><strong>{_text2}</strong></p>
+
+<div class="questions-holder">
+	{form quizForm}
+		<div style="display: none;">{input quizOne}</div>
+
+		<div class="question-item">
+			{input answerOne}
+		</div>
+		<div class="question-item">
+			{input answerTwo}
+		</div>
+		<div class="question-item">
+			{input answerThree}
+		</div>
+		<div n:if="$canRegister">{input send}</div>
+	{/form}
+</div>
+
+<p class="info">{_přihláška_do}</p>
+{capture $url}{_url_pravidla}{/capture}
+<a target="_blank" href="{!$url}" class="button-secondary track-external" data-url="{!$url}">{_úplná_pravidla}</a>

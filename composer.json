@@ -1,0 +1,28 @@
+{
+    "name": "pixman/nivea-2015-02-q10plus",
+    "description": "Nivea Q10 plus",
+    "minimum-stability": "stable",
+    "keywords": ["devrun"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Pixman s.r.o.",
+            "email": "podpora@pixman.cz"
+        }
+    ],
+    "require": {
+        "nette/nette": "~2.2.0",
+        "kdyby/doctrine": "v2.1.0",
+        "kdyby/translation": "v2.0.3",
+        "janmarek/webloader": "2.2.0",
+        "dg/adminer-custom": "v1.4.0",
+        "flame/framework": "dev-master",
+        "flame/module-installer": "@dev",
+        "flame/modules": "@dev",
+        "symfony/property-access": "~2.5"
+
+    },
+    "require-dev": {
+        "nette/tester": "~1.2.0"
+    }
+}
