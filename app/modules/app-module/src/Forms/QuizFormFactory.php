@@ -53,17 +53,17 @@ class QuizFormFactory extends BasicForm implements IQuizFormFactory
             ->addRule(Form::EQUAL, 'spatna_odpoved', 'B'); // jediná správná odpověď je "B"
 
         $this->addButton('answerOne', 'otazka_za_A')
-            ->setAttribute('class', 'button track-btn')
+            ->setAttribute('class', 'track-btn')
             ->setAttribute('data-value', 'A')
             ->setAttribute('data-name', 'click-A');
 
         $this->addButton('answerTwo', 'otazka_za_B')
-            ->setAttribute('class', 'button track-btn')
+            ->setAttribute('class', 'track-btn')
             ->setAttribute('data-value', 'B')
             ->setAttribute('data-name', 'click-B');
 
         $this->addButton('answerThree', 'otazka_za_C')
-            ->setAttribute('class', 'button track-btn')
+            ->setAttribute('class', 'track-btn')
             ->setAttribute('data-value', 'C')
             ->setAttribute('data-name', 'click-C');
 

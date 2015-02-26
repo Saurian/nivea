@@ -1,14 +1,11 @@
 nivea - Vánoční soutěž: "NIVEA - Adventi nyereményjáték"
 
 # --- homepage ---
-úvodní_popis: 'PRÓBÁLD KI A LEGÚJABB TERMÉKÜNKET!'
-text1: "NIVEA Q10Plus Zuhanyzás Közbeni Bőrfeszesítő Testápoló"
-text2: 'Feszes és rugalmas bőrre vágysz? Elfoglalt vagy, sok a dolgod - mégis szeretnél törődni magaddal, és hatékony bőrfeszesítő módszert keresel? '
-text3: "Mi egyszerűen megoldjuk a kérdést! Ragadd meg a lehetőséget, vegyél részt terméktesztünkben, és próbáld ki az új NIVEA Q10Plus Zuhanyzás Közbeni Bőrfeszesítő Testápolót Q10 koenzim gyöngyökkel!"
-text4: "Legyél a <strong>100 női tesztelő egyike</strong>, akik kipróbálhatják az új NIVEA Q10Plus Zuhanyzás Közbeni Bőrfeszesítő testápolót, és élvezd a sima, feszes és rugalmas bőr élményét!"
-text5: "További 5000 jelentkezőnek pedig NIVEA Q10Plus Zuhanyzás Közbeni Bőrfeszesítő testápoló termékmintát küldünk, hogy minél többen ki tudjátok próbálni a terméket."
+úvodní_popis: 'VÁLASZOLJ EGY EGYSZERŰ KÉRDÉSRE, ÉS TESZTELD INGYENESEN AZ ÚJ Q10PLUS RÁNCTALANÍTÓ SZÉRUM GYÖNGYÖKET!'
+text1: 'Győzd le a ráncokat az új Q10Plus Ránctalanító Szérum Gyöngyök<br>erejével! A Q10 koenzimet (a NIVEA Q10Plus arcápoló termékek közül) a legmagasabb koncentrációban tartalmazó formula hialuronsavval segít csökkenteni a meglévő ráncokat és simábbá, puhábbá teszi  a bőrfelszínt. Most ingyenesen kipróbálhatod, ha válaszolsz egy egyszerű kérdésre.'
+nadpis2: 'Hogyan kell használni az új ránctalanító szérumot?'
 chci_testovat: "SZERETNÉM KIPRÓBÁLNI!"
-přihláška_do: "A tesztelésre 2015. január 30-tól 2015. február 8-ig jelentkezhetsz."
+přihláška_do: "A tesztelésre február 26-tól április 26-ig jelentkezhetsz."
 úplná_pravidla: "RÉSZLETES RÉSZVÉTELI FELTÉTELEK"
 url_pravidla: "http://www.nivea.hu/A-NIVEA-vilaga/ext/hu-HU/nivea_games_and_rules"
 
@@ -56,7 +53,7 @@ pravidla_soutěže: "Pravidla soutěže"
 potvrzuji_pečlivé_pročtení: "a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
 a: "a"
 zpet: "vissza"
-datum_narozeni: "születési idő"
+datum_narozeni: "születési idő *"
 
 email_již_existuje: 'A megadott e-mail cím már létezik.'
 email_nenalezen: 'az e-mail nem található’'
@@ -89,7 +86,7 @@ odesílací_informace: "Amennyiben a szerencsés tesztelők közé bekerülsz, a
 děkující_titulek: "FEDEZD FEL A TÖBBI ZUHANYZÁS KÖZBENI TESTÁPOLÓT IS!"
 děkující_popisek: "Válassz a sokféle illat közül, és hozz ki még többet a bőrápolás új és különleges módjából!"
 děkujeme_pokračovat: "TOVÁBB"
-url_pokračovat: "http://www.nivea.hu/Termekek/Testapolas/in-shower-body-moisturizers"
+url_pokračovat: "http://www.nivea.hu/A-NIVEA-vilaga/face-care/tips-and-tricks"
 
 
 # --- flashes ---

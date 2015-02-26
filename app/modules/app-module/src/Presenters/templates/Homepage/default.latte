@@ -1,26 +1,36 @@
 {block title}{_title_homepage}{/block}
 {block content}
 
-<h1 class="pink"><strong>{!_úvodní_popis}</strong>{!_text1}</h1>
-<p class="no-margin"><strong>{_text2}</strong></p>
 
-<div class="questions-holder">
-	{form quizForm}
-		<div style="display: none;">{input quizOne}</div>
+<h1><strong>{!_úvodní_popis}</strong></h1>
+<p>{!_text1}</p>
+<h2>{!_nadpis2}</h2>
+    
+    {form quizForm}
+    <div class="questions">
+	 <div style="display: none;">{input quizOne}</div>
+        <div class="quest">
+          	<label class="quest-label">A)</label>
+                {input answerOne}
+        </div>
+        <div class="quest">
+          	<label class="quest-label">B)</label>
+                {input answerTwo}
+        </div>
+        <div class="quest">
+          	<label class="quest-label">C)</label>
+                {input answerThree}
+        </div>        
+    </div>
+    
+    <div n:if="$canRegister">{input send}</div>
+    {/form}
 
-		<div class="question-item">
-			{input answerOne}
-		</div>
-		<div class="question-item">
-			{input answerTwo}
-		</div>
-		<div class="question-item">
-			{input answerThree}
-		</div>
-		<div n:if="$canRegister">{input send}</div>
-	{/form}
-</div>
-
-<p class="info">{_přihláška_do}</p>
+     <img src="images/yes-bubble.png" alt="HELYES" class="bubble" id="bubble-yes">
+     <img src="images/no-bubble.png" alt="ROSSZ" class="bubble" id="bubble-no">
+      
+<div id="footer-text">    
+<div class="info">{_přihláška_do}</div>
 {capture $url}{_url_pravidla}{/capture}
 <a target="_blank" href="{!$url}" class="button-secondary track-external" data-url="{!$url}">{_úplná_pravidla}</a>
+</div>

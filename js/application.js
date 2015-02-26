@@ -44,7 +44,7 @@
         if (message) {
             element = $('.error-messages');
             if ($(element).length) {
-                $(element).find('.message').text(message);
+                $(element).find('.message').html(message);
                 $(element).css("display", 'block');
                 clearInterval(int);
                 int = setTimeout((function() {
@@ -58,12 +58,19 @@
         $('.popup.logged').removeClass('active');
         $('.popup.lost').addClass('active');
     });
-
+    
+    $('.bubble').css("display","none");
+        
     $('input[data-value]').click(function() {
         var $val = $(this).data("value");
-        $('input[data-value]').removeClass('active');
-        $(this).addClass('active');
+        $('input[data-value]').parent('.quest').removeClass('active');
+        $(this).parent('.quest').addClass('active');
         $("input[name=quizOne][value=" + $val + "]").prop('checked', true);
+        
+        $('.bubble').css("display","none");
+    
+        if ($val=='B') $('#bubble-yes').css("display","block");
+        else $('#bubble-no').css("display","block");
     });
 
     $('.flash').message();

@@ -1,6 +1,7 @@
 .idea/*
 log/*
 temp/*
+webtemp
 test/temp*
 test/log*
 www/webtemp/*
@@ -15,3 +16,6 @@ www/webtemp/*
 !test/temp/cache/.gitignore
 !test/temp/sessions/.gitignore
 !www/webtemp/.gitignore
+
+
+composer.lock

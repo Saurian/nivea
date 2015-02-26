@@ -1,38 +1,18 @@
-lostPswForm:
-	zaslat_na_e-mail: "zaslat na e-mail"
-	e-mail: "e-mail"
-	vyplňte_prosím_e-mail: 'Vyplňte prosím e-mail'
-	vyplňte_email_v_platném_formátu: 'Prosím, vyplňte email v platném formátu.'
-	email_send: 'Heslo bylo odesláno na vámi zvolenou emailovou adresu'
-	email_fail: 'Heslo se nepodařilo odeslat'
-	email_non_exist: 'Vámi zadaný e-mail neexistuje'
-
-loginForm:
-	e-mail: "e-mail"
-	vyplňte_email_v_platném_formátu: 'Prosím, vyplňte email v platném formátu.'
-	vyplňte_prosím_e-mail: 'Vyplňte prosím e-mail'
-	heslo: 'heslo'
-	vyplňte_vaše_heslo: 'Vyplňte vaše heslo.'
-	přihlásit_se: 'přihlásit se'
-	zaslat_zapomenuté_heslo: 'zaslat zapomenuté heslo'
-
 registrationForm:
 	odeslat: 'ELKÜLDÉS'
 	žena: nő
 	muž: férfi
-	den: év
+	den: nap
 	měsíc: hónap
-	rok: nap
+	rok: év
 	zvolte_pohlaví: "Kérjük, add meg a nemed!"
-	zvolte_používání_výrobků: 'Kérjük, add meg, hogy használsz-e bőrfeszesítő terméket!'
-	jméno: vezetéknév *
-	příjmení: keresztnév *
+	zvolte_používání_výrobků: 'Kérjük, válaszolj a kérdésre!'
+	jméno: keresztnév *
+	příjmení: vezetéknév *
 	e-mail: e-mail *
 	ulice: utca *
 	č.p.: hsz. *
 	PSČ: ir.sz.*
-	heslo: heslo *
-	heslo_znovu: heslo pro kontrolu *
 	město: település *
 	vyplňte_e-mail: "Kérjük, írd be az e-mail címed!"
 	vyplňte_platný_e-mail: "Kérjük, az e-mail címed a megfelelő formátumba írd be!"
@@ -52,37 +32,19 @@ registrationForm:
 	vyplňte_měsíc_narození_správně: "A születésnap hónapjának a 1-12 tartomány közt kell lennie."
 	musíte_být_starší_x_let: "A játékban 18. éven felüliek vehetnek részt!"
 
-	vyplňte_den_narození: 'Vyplňte den narození'
-	vyplňte_měsíc_narození: 'Vyplňte měsíc narození'
-	vyplňte_rok_narození: 'Vyplňte rok narození'
-
+	vyplňte_den_narození: "A születésnap megadásának a tartományban kell lennie %d."
+	vyplňte_měsíc_narození: "A születésnap hónapjának a 1-12 tartomány közt kell lennie."
+	vyplňte_rok_narození: "A játékban 18. éven felüliek vehetnek részt!"
+	
 	posílat_newsletter: "Szeretnék e-mailben tájékoztatást kapni a NIVEA további eseményeiről, nyereményjátékairól, promócióiról és híreiről."
-	potvrďte_souhlas_s_pravidly_soutěže: 'Kérjük, fogadd el az adatvédelmi szabályzatot, valamint a játékszabályzatot.'
+	potvrďte_souhlas_s_pravidly_soutěže: 'Kérjük,<br> fogadd el az adatvédelmi szabályzatot, valamint a játékszabályzatot.'
 	ano: igen
 	ne: nem
 
-quizOneForm:
-	jak_velký_podíl_má_sluneční_záření_na_tvorbě_vrásek: 'Jak velký podíl má sluneční záření na tvorbě vrásek, pigmentových skvrn a dalších známek stárnutí pleti?'
-	jak_působí_účinná_látka_lumicinol_na_pleť: 'Jak působí účinná látka lumicinol na pleť?'
-	jaký_je_rozdíl_mezi_denní_a_noční_péčí: 'Jaký je rozdíl mezi denní a noční péčí řady NIVEA Cellular Perfect Skin?'
-
-	vyplňte_jednu_možnost_1: 'Prosím, vyplňte jak velký podíl má sluneční záření na tvorbě vrásek, pigmentových skvrn a dalších známek stárnutí pleti.'
-	vyplňte_jednu_možnost_2: 'Prosím, vyplňte jak působí účinná látka lumicinol na pleť.'
-	vyplňte_jednu_možnost_3: 'Prosím, vyplňte jaký je rozdíl mezi denní a noční péčí řady NIVEA Cellular Perfect Skin.'
-
-	pokračovat: 'pokračovat'
-	a: 'a'
-	b: 'b'
-	c: 'c'
-
-	a.1: 'Až 40%'
-	b.1: 'Až 60%'
-	c.1: 'Až 80%'
-
-	a.2: 'Reguluje nadprodukci pigmentu melaninu, která způsobuje vznik pigmentových skvrn.'
-	b.2: 'Působí jako make-up a přebarví přirozený tón pleti.'
-	c.2: 'Zpevňuje pleť a vyhlazuje vrásky.'
-
-	a.3: 'Intenzivní noční péče obsahuje více pigmentů.'
-	b.3: 'Intenzivní noční péče obsahuje navíc beta karoten, který má vliv na barvu pleti.'
-	c.3: 'Intenzivní noční péče má nejvyšší koncentraci účinné látky lumicinol, která redukuje pigmentové skvrny a sjednocuje tón pleti.'
+quizForm:
+	pokračovat: 'REGISZTRÁLJ AZ INGYENES TERMÉKTESZTRE!'
+	tato_polozka_je_povinna: 'Kérjük, válaszolj a kérdésre!'
+	spatna_odpoved: 'A kérdésre rosszul válaszoltál.'
+	otazka_za_A: 'A szokásos éjszaki arckrémünk helyett.'
+	otazka_za_B: 'Naponta kétszer, a szokásos nappali és esti arckrémünk felvitele előtt.'
+	otazka_za_C: 'Alapozó helyett.'
