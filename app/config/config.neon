@@ -5,14 +5,15 @@
 # http://nette.org/security-warning
 #
 parameters:
-	lang: sk
+	lang: cs
 	contest:
 		omnitureIframe: false
 		test: true
 		registerFrom: 2015-02-08 # ← datum registrace včetně
 		registerTo: 2016-02-18 # ← datum registrace včetně
+		okAnswers: ["1", "3", "5" , "7"] # ← správné odpovědi, je nutné dát do uvozovek
 		transaction:
-			name: 2015_02_q10plus
+			name: 2015_02_inshower_q10_2
 			system: ProCampaign
 			url: "http://news.nivea.%lang%/ProCampaignAPI.aspx"
 			send: true

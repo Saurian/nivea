@@ -66,6 +66,11 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
     {
         $this->addGroup();
 
+        $this->addRadioList('shorts_size', 'velikost_šortek', array('sm' => 'sm', 'l-xl' => 'l-xl'))
+            ->addRule(Form::FILLED, 'zvolte_velikost_šortek')
+            ->setAttribute("tabindex",0)
+            ->controlPrototype->class = 'inline-item track';
+
         $this->addRadioList('gender', 'pohlaví', array(0 => 'žena', 1 => 'muž'))
             ->setValue(0)
             ->setDefaultValue(0)
@@ -227,11 +232,11 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
 
         foreach ($section as $key => $val) {
             if (isset($questions->$key)) {
-                $questions->$key = $val;
+                $questions->$key = 'true';
             }
         }
 
-        $entity->setQuestions($questions->setLang($this->locale));
+        $entity->setQuestions($questions->setLang($this->locale)->setQuizTwo($form->getValues()['shorts_size']));
 
         try {
             $em = $this->getEntityMapper()->getEntityManager();

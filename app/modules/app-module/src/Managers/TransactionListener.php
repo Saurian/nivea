@@ -12,14 +12,9 @@ namespace AppModule\Managers;
 
 use AppModule\Entities\QuestionEntity;
 use AppModule\Entities\UserEntity;
-use Doctrine\ORM\Event\LifecycleEventArgs;
-use Doctrine\ORM\Event\OnFlushEventArgs;
 use Doctrine\ORM\Event\PostFlushEventArgs;
-use Doctrine\ORM\Event\PreFlushEventArgs;
 use Doctrine\ORM\Events;
-use Kdyby\Doctrine\EntityDao;
 use Kdyby\Events\Subscriber;
-use Nette\Application\Application;
 use Nette\Object;
 use Tracy\Debugger;
 
@@ -226,7 +221,7 @@ class TransactionListener extends Object implements Subscriber
 
     private function createRequest()
     {
-        $url    = $this->contest['transaction']['url'];
+        $url    = str_replace('.cs', '.cz', $this->contest['transaction']['url']);
         $name   = $this->contest['transaction']['name'];
         $system = $this->contest['transaction']['system'];
 
@@ -282,7 +277,8 @@ class TransactionListener extends Object implements Subscriber
             $sender      = isset($this->userAttributes[self::KEY_EMAIL]) ? $this->userAttributes[self::KEY_EMAIL] : 'unknown';
             $extResponse = isset($response['@attributes']) ? $response['@attributes'] : $response;
             \Tracy\Debugger::log($sender . ' -request- ' . $result, self::KEY_LOGGER);
-            \Tracy\Debugger::log($sender . ' -response- ' . implode(',', $extResponse), self::KEY_LOGGER);
+            $out = is_array($extResponse) ? implode(',', $extResponse) : $extResponse;
+            \Tracy\Debugger::log($sender . ' -response- ' . $out, self::KEY_LOGGER);
             Debugger::barDump($result, 'result');
             Debugger::barDump($extResponse, 'response');
         }
@@ -306,6 +302,8 @@ class TransactionListener extends Object implements Subscriber
             "Connection: close",
             "Content-Length: " . strlen($request)
         );
+
+
 
         try {
             $ch = curl_init();
@@ -369,6 +367,15 @@ class TransactionListener extends Object implements Subscriber
 
             $this->createRequest();
         }
+    }
+
+
+    /**
+     * @return array system settings
+     */
+    public function getContest()
+    {
+        return $this->contest;
     }
 
 

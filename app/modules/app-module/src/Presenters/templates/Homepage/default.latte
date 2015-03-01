@@ -3,25 +3,20 @@
 
 
 <h1><strong>{!_úvodní_popis}</strong></h1>
-<p>{!_text1}</p>
-<h2>{!_nadpis2}</h2>
-    
+<h2>{!_text1}</h2>
+<p>{!_text2}</p>
+
     {form quizForm}
     <div class="questions">
-	 <div style="display: none;">{input quizOne}</div>
-        <div class="quest">
-          	<label class="quest-label">A)</label>
-                {input answerOne}
-        </div>
-        <div class="quest">
-          	<label class="quest-label">B)</label>
-                {input answerTwo}
-        </div>
-        <div class="quest">
-          	<label class="quest-label">C)</label>
-                {input answerThree}
-        </div>        
-    </div>
+
+		{foreach $form['quizOne']->items as $key => $label}
+			<div class="quest">
+			<input n:name="quizOne:$key">
+			<label n:name="quizOne:$key">{_forms.quizForm.$label}</label>
+			</div>
+		{/foreach}
+
+	</div>
     
     <div n:if="$canRegister">{input send}</div>
     {/form}

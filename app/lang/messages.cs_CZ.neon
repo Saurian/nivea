@@ -23,8 +23,9 @@ url_pravidla: "http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info"
 
 # --- registration ---
 registrace: REGISTRACE
-text_registrace1: "Chcete-li se zapojit do testování, vyplňte prosím krátký formulář"
-používáte_výrobky: "Používáte výrobky pro zpevnění pokožky?"
+text_registrace1: "Vyhrajte"
+text_registrace2: "Zpevňující balíček Nivea"
+text_registrace3: "Chcete-li se zapojit do testování, vyplňte prosím krátký formulář"
 povinná_pole: "Pole označená * jsou povinná.<br>Do testování se můžete přihlásit od 30. 1. do 8. 2. 2015."
 
 zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: "Zaškrtnutím tohoto políčka a odesláním formuláře dobrovolně souhlasím, že poskytnuté údaje v rozsahu formuláře budou zpracovány pro účely vyhodnocení soutěže. V případě, že udělím souhlas k zasílání obchodních sdělení - informací e-mailem - viz. druhé políčku souhlasu, tak budou uvedené údaje zpracovány i pro účely stanovené v bodě 2. %politiky_ochrany_soukromí%. Potvrzuji, že jsem si pečlivě pročetl/a podmínky zpracování údajů dle Politiky ochrany soukromí a %pravidla_soutěže% <br>a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
@@ -51,17 +52,6 @@ děkující_popisek: "Nový snadný způsob péče o pokožku si můžete užít
 děkujeme_pokračovat: "Pokračovat"
 url_pokračovat: "http://www.nivea.cz/Vyrobky/Pece-o-telo/Telova-mleka-do-sprchy"
 
-
-vámi zadaná emailová adresa již existuje: "Vámi zadaná emailová adresa již existuje"
-
-
-# --- errors ---
-your browser sent a request that this server could not understand or process.: "Your browser sent a request that this server could not understand or process."
-oops: "Oops"
-page Not Found: "Page Not Found"
-the page you requested could not be found...: "The page you requested could not be found. It is possible that the address is incorrect, or that the page no longer exists. Please use a search engine to find what you are looking for."
-server Error: "Server Error"
-the server encountered an internal error: "'We're sorry! The server encountered an internal error and was unable to complete your request. Please try again later."
 
 # --- links ---
 rules_url: "http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info"

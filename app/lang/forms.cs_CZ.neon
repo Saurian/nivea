@@ -17,6 +17,10 @@ loginForm:
 	zaslat_zapomenuté_heslo: 'zaslat zapomenuté heslo'
 
 registrationForm:
+	velikost_šortek: 'Jakou velikost šortek v případě výhry?'
+	zvolte_velikost_šortek: 'Vyplňte prosím velikost šortek v případě výhry'
+	sm: 'S / M'
+	l-xl: 'L / XL'
 	vyplňte_jednu_možnost: 'Prosím, vyplňte jednu možnost.'
 	odeslat: 'Odeslat'
 	den: "den"
@@ -77,8 +81,15 @@ quizForm:
 	b: 'b'
 	c: 'c'
 
-	tato_polozka_je_povinna: 'Vyplňte jednu možnost'
+	tato_polozka_je_povinna: 'Odpovězte prosím na otázky'
 	spatna_odpoved: 'Toto je špatná odpověď'
-	otazka_za_A: 'Otázka za A'
-	otazka_za_B: 'Otázka za B'
-	otazka_za_C: 'Otázka za C'
+	otazka_1: 'Otázka za A'
+	otazka_2: 'Otázka za B'
+	otazka_3: 'Otázka za C'
+	otazka_4: 'Otázka za D'
+	otazka_5: 'Otázka za E'
+	otazka_6: 'Otázka za F'
+	otazka_7: 'Otázka za G'
+	otazka_8: 'Otázka za H'
+	otazka_9: 'Otázka za I'
+	otazka_10: 'Otázka za J'

@@ -48,24 +48,9 @@ class QuizFormFactory extends BasicForm implements IQuizFormFactory
     /** @return QuizFormFactory */
     function create()
     {
-        $this->addRadioList('quizOne', null, array('A' => null, 'B' => null, 'C' => null))
-            ->addRule(Nette\Application\UI\Form::FILLED, 'tato_polozka_je_povinna')
-            ->addRule(Form::EQUAL, 'spatna_odpoved', 'B'); // jediná správná odpověď je "B"
-
-        $this->addButton('answerOne', 'otazka_za_A')
-            ->setAttribute('class', 'track-btn')
-            ->setAttribute('data-value', 'A')
-            ->setAttribute('data-name', 'click-A');
-
-        $this->addButton('answerTwo', 'otazka_za_B')
-            ->setAttribute('class', 'track-btn')
-            ->setAttribute('data-value', 'B')
-            ->setAttribute('data-name', 'click-B');
-
-        $this->addButton('answerThree', 'otazka_za_C')
-            ->setAttribute('class', 'track-btn')
-            ->setAttribute('data-value', 'C')
-            ->setAttribute('data-name', 'click-C');
+        $okAnswers = $this->transitionListener->getContest()['okAnswers'];
+        $this->addCheckboxList('quizOne', null, array('otazka_1', 'otazka_2', 'otazka_3', 'otazka_4', 'otazka_5', 'otazka_6', 'otazka_7', 'otazka_8', 'otazka_9', 'otazka_10'))
+            ->addRule('FormValidators::validateChecked', 'spatna_odpoved', $okAnswers);
 
         $this->addSubmit('send', 'pokračovat')->setAttribute('class', 'button next')->getControlPrototype()
             ->setName("button")

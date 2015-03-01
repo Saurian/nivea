@@ -34,6 +34,40 @@
         }), messageWait);
     };
 
+    var handler = function(event) {
+        form = $(event.currentTarget).closest('form');
+        el = $(form).find('input:checkbox:first');
+        rules = $(el).data('nette-rules');
+        value = $(event.currentTarget).val();
+
+        $.each(rules, function(){
+            if ($.inArray(value, this.arg) == -1) {
+                Nette.validateControl(event.target);
+                $(event.currentTarget).addClass('invalid');
+                $(event.currentTarget).removeClass('valid');
+
+            } else {
+                $(event.currentTarget).addClass('valid');
+                $(event.currentTarget).removeClass('invalid');
+            }
+        });
+    };
+
+    $('.quiz-form input[type="checkbox"]').on('change', handler);
+
+
+    /**
+     * @return {boolean}
+     */
+    Nette.validators.FormValidators_validateChecked = function (elem, arg, value) {
+
+        var val = [];
+        $(':checkbox:checked').each(function(i) {
+            val[i] = $(this).val();
+        });
+        return $(arg).not(val).length === 0 && $(val).not(arg).length === 0;
+    };
+
     Nette.addError = function(elem, message) {
         if (elem.focus) {
             elem.focus();

@@ -1,14 +1,12 @@
 {block title}{_title_děkujeme}{/block}
 {block content}
-<h1><strong>KÖSZÖNJÜK!</strong>A REGISZTRÁCIÓD SIKERES VOLT!</h1>
-<div class="reg-text">Amennyiben bekerülsz a tesztelők közé, a regisztráció során megadott e-mail címen fogunk értesíteni.</div> 
+<h1><strong>{!_děkujeme}</strong><br>{!_udaje_uloženy}</h1>
+<div class="reg-text">{!_odesílací_informace}</div>
 
 <div class="thanks-more">
-	<h2>Kényeztesd magad!</h2>
-      <p>Bár professzionális termékeink hatékony segítséget kínálnak,
-a megfelelő hozzáállást és a tudást semmi nem pótolja.</p>
-      
-	{capture $url}{_url_pokračovat}{/capture}
+	<h2>{!_děkující_titulek}</h2>
+	<p>{!_děkující_popisek}</p>
 
-	<a target="_blank" href="{!$url}" class="button track-external" data-url="{!$url}"><strong>Trükkök és tippek</strong></a>
+	{capture $url}{_url_pokračovat}{/capture}
+	<a target="_blank" href="{!$url}" class="button track-external" data-url="{!$url}"><strong>{_děkujeme_pokračovat}</strong></a>
 </div>

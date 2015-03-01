@@ -76,13 +76,15 @@ class QuestionEntity extends Object
     protected $updated;
 
 
-
     /**
      * @param string $quizFour
+     *
+     * @return $this
      */
     public function setQuizFour($quizFour)
     {
         $this->quizFour = $quizFour;
+        return $this;
     }
 
     /**
@@ -95,10 +97,13 @@ class QuestionEntity extends Object
 
     /**
      * @param string $quizOne
+     *
+     * @return $this
      */
     public function setQuizOne($quizOne)
     {
         $this->quizOne = $quizOne;
+        return $this;
     }
 
     /**
@@ -111,10 +116,13 @@ class QuestionEntity extends Object
 
     /**
      * @param string $quizTree
+     *
+     * @return $this
      */
     public function setQuizThree($quizTree)
     {
         $this->quizThree = $quizTree;
+        return $this;
     }
 
     /**
@@ -127,10 +135,13 @@ class QuestionEntity extends Object
 
     /**
      * @param string $quizTwo
+     *
+     * @return $this
      */
     public function setQuizTwo($quizTwo)
     {
         $this->quizTwo = $quizTwo;
+        return $this;
     }
 
     /**
