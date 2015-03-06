@@ -1,29 +1,45 @@
 {block title}{_title_homepage}{/block}
+{block scripts}
+	{include parent}
+	<script src="{$basePath}/js/jquery.textareaCounter.plugin.js"></script>
+	<script type="text/javascript" n:syntax="double">
+		$(document).ready(function() {
+
+			function txtCounter($name, $cols) {
+				$('#frm-quizForm-' + $name).textareaCount({
+					'maxCharacterSize': $cols,
+					'originalStyle': 'originalTextareaInfo',
+					'warningStyle' : 'warningTextareaInfo',
+					'warningNumber': 40,
+					'displayFormat': '<div class="counter">{{!_zbyva}} #left {{!_znaku}}</div>'
+				});
+			}
+
+			txtCounter('quizOne', 1500);  // ← počet znaků
+
+		});
+	</script>
+{/block}
+
 {block content}
-
-
 <h1><strong>{!_úvodní_popis}</strong></h1>
 <h2>{!_text1}</h2>
 <p>{!_text2}</p>
 
     {form quizForm}
     <div class="questions">
-
-		{foreach $form['quizOne']->items as $key => $label}
-			<div class="quest">
-			<input n:name="quizOne:$key">
-			<label n:name="quizOne:$key">{_forms.quizForm.$label}</label>
+		<div class="field_textarea">
+			<div class="textarea_content_bg">
+				<div class="textarea_header_bg">
+					{input quizOne}
+				</div>
 			</div>
-		{/foreach}
-
+			<div class="textarea_footer_bg"></div>
+		</div>
 	</div>
-    
     <div n:if="$canRegister">{input send}</div>
     {/form}
 
-     <img src="images/yes-bubble.png" alt="HELYES" class="bubble" id="bubble-yes">
-     <img src="images/no-bubble.png" alt="ROSSZ" class="bubble" id="bubble-no">
-      
 <div id="footer-text">    
 <div class="info">{_přihláška_do}</div>
 {capture $url}{_url_pravidla}{/capture}

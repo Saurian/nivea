@@ -2,7 +2,7 @@
 
 /**
  *
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_03_MagicMoments
  *
  * Copyright (c) 2015
  *
@@ -196,52 +196,6 @@ abstract class BasePresenter extends Presenter
             $cache->clean(array(\Nette\Caching\Cache::ALL=>true));
             $this->redirect('Homepage:');
         }
-    }
-
-
-    public function isStatus($i)
-    {
-        return (isset($this->status[$i]) && $this->status[$i] == ' burn') == true;
-    }
-
-
-    protected function setStatus($i)
-    {
-        $result = '';
-        if ($user = $this->getUserData()) {
-            switch ($i) {
-                case 1: $result = $this->getUserData()->getQuestions()->getQuizOne() ? ' burn': '';
-                    break;
-                case 2: $result = $this->getUserData()->getQuestions()->getQuizTwo() ? ' burn': '';
-                    break;
-                case 3: $result = $this->getUserData()->getQuestions()->getQuizThree() ? ' burn': '';
-                    break;
-                case 4: $result = $this->getUserData()->getQuestions()->getQuizFour() ? ' burn': '';
-                    break;
-                default: $result = '';
-            }
-        }
-
-        if (!$result) {
-            $from   = DateTime::from($this->application->getSettingDateForWeek($i, ApplicationManager::PERIOD_FROM));
-            $to     = DateTime::from($this->application->getSettingDateForWeek($i, ApplicationManager::PERIOD_TO));
-            $now    = DateTime::from('now');
-            $result = ($now > $from) // and $now < $to
-                ? ' full'
-                : '';
-        }
-
-        $this->status[$i] = $result;
-    }
-
-
-    public function getStatus($i)
-    {
-        if (!isset($this->status[$i])) {
-            $this->setStatus($i);
-        }
-        return $this->status[$i];
-
     }
 
 

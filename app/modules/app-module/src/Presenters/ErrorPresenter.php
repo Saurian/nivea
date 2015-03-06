@@ -1,9 +1,8 @@
 <?php
 
-namespace App\FrontModule\Presenters;
+namespace AppModule\Presenters;
 
 use Nette,
-    App\Model,
     Tracy\Debugger;
 
 
@@ -20,6 +19,7 @@ class ErrorPresenter extends BasePresenter
      */
     public function renderDefault($exception)
     {
+        die("Asd");
         if ($exception instanceof Nette\Application\BadRequestException) {
             $code = $exception->getCode();
             // load template 403.latte or 404.latte or ... 4xx.latte

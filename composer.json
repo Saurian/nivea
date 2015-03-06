@@ -1,6 +1,6 @@
 {
-    "name": "pixman/nivea-2015-02-q10plus",
-    "description": "Nivea Q10 plus",
+    "name": "pixman/nivea-2015-03-magic_moments",
+    "description": "Nivea Magic Moments",
     "minimum-stability": "stable",
     "keywords": ["devrun"],
     "license": "proprietary",
@@ -11,9 +11,11 @@
         }
     ],
     "require": {
-        "nette/nette": "~2.2.0",
+        "nette/nette": "~2.3.0",
         "kdyby/doctrine": "v2.1.0",
         "kdyby/translation": "v2.0.3",
+        "kdyby/nette-session-panel": "v3.2.0",
+        "kdyby/html-validator-panel": "dev-master",
         "janmarek/webloader": "2.2.0",
         "dg/adminer-custom": "v1.4.0",
         "flame/framework": "dev-master",

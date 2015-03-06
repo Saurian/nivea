@@ -5,11 +5,11 @@ namespace AppModule\DI;
 
 use Flame\Modules\Configurators\IPresenterMappingConfig;
 use Flame\Modules\Providers\IPresenterMappingProvider;
-use Kdyby\Doctrine\EntityManager;
-use Kdyby\Events\EventManager;
+use Flame\Modules\Providers\IRouterProvider;
+use Nette\Application\Routers\Route;
+use Nette\Application\Routers\RouteList;
 use Nette\DI\CompilerExtension;
 use Nette\PhpGenerator\ClassType;
-use Tracy\Debugger;
 
 
 /**
@@ -18,16 +18,18 @@ use Tracy\Debugger;
 class AppExtension extends CompilerExtension
     implements
     \Kdyby\Doctrine\DI\IEntityProvider,
-//    \CmsModule\System\DI\IPresenterProvider
     IPresenterMappingProvider
 //    IRouterProvider
 {
 
     const TAG_ROUTE = 'devrun.route';
 
+    /** @var string */
+    private $_lang;
 
     /** @var mixed[] */
     public $defaults = array(
+        'lang'    => 'cs',
         'session' => array(),
         'website' => array(
             'routePrefix'      => '',
@@ -58,8 +60,8 @@ class AppExtension extends CompilerExtension
             $this->loadFromFile(dirname(dirname(__DIR__)) . '/Resources/config/config.neon')
         );
 
-//        $container = $this->getContainerBuilder();
-//        $config    = $this->getConfig($this->defaults);
+        $container = $this->getContainerBuilder();
+        $config    = $this->getConfig($this->defaults);
 
 //        $presenter = explode(':', $config['website']['defaultPresenter']);
 
@@ -105,5 +107,48 @@ class AppExtension extends CompilerExtension
         return array(
             'AppModule\Entities' => dirname(__DIR__) . '*Entity.php',
         );
+    }
+
+    /**
+     * Returns array of ServiceDefinition,
+     * that will be appended to setup of router service
+     *
+     * @return \Nette\Application\IRouter
+     */
+    public function getRoutesDefinition()
+    {
+
+        $router   = new RouteList();
+        $router[] = new Route('index.php', 'App:Registration:default', Route::ONE_WAY);
+
+        $router[]      = $adminRouter = new RouteList('Cms');
+        $adminRouter[] = new Route('admin/[<locale=cs cs|en>/]<presenter>/<action>[/<id>]', array(
+            'presenter' => 'Dashboard',
+            'action'    => 'default'
+        ));
+
+        $router[] = $frontRouter = new RouteList('App');
+        $frontRouter[] = new Route('sitemap.xml', array('presenter' => 'Sitemap', 'action' => 'sitemap',));
+        $frontRouter[] = new Route('clear', array('presenter' => 'Homepage', 'action' => 'clearCache',));
+
+        // detect prefix
+        $mask = sprintf("[<locale=%s %s>/]<slug .+>[/<presenter>/<action>[/<id>]]", 'cs', 'cs|en');
+
+        $frontRouter[] = new Route("[<locale={$this->_lang} sk|hu|cs>/]<presenter>/<action>[/<id>]", array(
+                'presenter' => array(
+                    Route::VALUE        => 'Homepage',
+                    Route::FILTER_TABLE => array(),
+                ),
+                'action'    => array(
+                    Route::VALUE        => 'default',
+                    Route::FILTER_TABLE => array(
+                        'odeslana' => 'send',
+                    ),
+                ),
+            )
+        );
+
+        return $router;
+
     }
 }

@@ -1,10 +1,9 @@
-
 SET NAMES utf8;
 SET foreign_key_checks = 0;
 SET time_zone = '+01:00';
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
-CREATE TABLE `nivea_2015_02_inshower_q10_2_questions` (
+CREATE TABLE `nivea_2015_03_magic_moments_questions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `quiz_one` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -15,12 +14,12 @@ CREATE TABLE `nivea_2015_02_inshower_q10_2_questions` (
   `created` datetime DEFAULT NULL,
   `updated` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `UNIQ_319CB0D4A76ED395` (`user_id`),
-  CONSTRAINT `FK_319CB0D4A76ED395` FOREIGN KEY (`user_id`) REFERENCES `nivea_2015_02_inshower_q10_2_user` (`id`) ON DELETE CASCADE
+  UNIQUE KEY `UNIQ_A7147DE2A76ED395` (`user_id`),
+  CONSTRAINT `FK_A7147DE2A76ED395` FOREIGN KEY (`user_id`) REFERENCES `nivea_2015_03_magic_moments_user` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-CREATE TABLE `nivea_2015_02_inshower_q10_2_user` (
+CREATE TABLE `nivea_2015_03_magic_moments_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `firstname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,

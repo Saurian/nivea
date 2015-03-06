@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_03_MagicMoments
  *
  * Copyright (c) 2015
  *
@@ -65,11 +65,6 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
     function create()
     {
         $this->addGroup();
-
-        $this->addRadioList('shorts_size', 'velikost_šortek', array('sm' => 'sm', 'l-xl' => 'l-xl'))
-            ->addRule(Form::FILLED, 'zvolte_velikost_šortek')
-            ->setAttribute("tabindex",0)
-            ->controlPrototype->class = 'inline-item track';
 
         $this->addRadioList('gender', 'pohlaví', array(0 => 'žena', 1 => 'muž'))
             ->setValue(0)
@@ -196,8 +191,6 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             ->controlPrototype->class = 'id-newsletter';
 
 
-
-
         $btn = $this->addSubmit('send', 'odeslat')->setAttribute('class', 'send-button button next')->getControlPrototype()
             ->setName("button")
             ->create('strong', $this->translator->translate('forms.registrationForm.odeslat'));
@@ -232,11 +225,11 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
 
         foreach ($section as $key => $val) {
             if (isset($questions->$key)) {
-                $questions->$key = 'true';
+                $questions->$key = $val;
             }
         }
 
-        $entity->setQuestions($questions->setLang($this->locale)->setQuizTwo($form->getValues()['shorts_size']));
+        $entity->setQuestions($questions->setLang($this->locale));
 
         try {
             $em = $this->getEntityMapper()->getEntityManager();

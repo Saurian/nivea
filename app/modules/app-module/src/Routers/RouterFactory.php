@@ -81,10 +81,8 @@ class RouterFactory
 
         $router[] = $frontRouter = new RouteList('App');
 
-        $frontRouter[] = new Route('sitemap.xml', array(
-            'presenter' => 'Sitemap',
-            'action'    => 'sitemap',
-        ));
+        $frontRouter[] = new Route('sitemap.xml', array('presenter' => 'Sitemap', 'action' => 'sitemap',));
+        $frontRouter[] = new Route('clear', array('presenter' => 'Homepage', 'action' => 'clearCache',));
 
         // detect prefix
         $prefix = $this->defaults['website']['routePrefix'];

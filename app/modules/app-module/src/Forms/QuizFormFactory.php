@@ -1,11 +1,11 @@
 <?php
 /**
  *
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_03_MagicMoments
  *
  * Copyright (c) 2015
  *
- * @file QuizOneFormFactory.php
+ * @file QuizFormFactory.php
  * @author  Pavel Paulík <pavel.paulik1@gmail.com>
  */
 
@@ -48,9 +48,8 @@ class QuizFormFactory extends BasicForm implements IQuizFormFactory
     /** @return QuizFormFactory */
     function create()
     {
-        $okAnswers = $this->transitionListener->getContest()['okAnswers'];
-        $this->addCheckboxList('quizOne', null, array('otazka_1', 'otazka_2', 'otazka_3', 'otazka_4', 'otazka_5', 'otazka_6', 'otazka_7', 'otazka_8', 'otazka_9', 'otazka_10'))
-            ->addRule('FormValidators::validateChecked', 'spatna_odpoved', $okAnswers);
+        $this->addTextArea('quizOne', null, 50, 15)
+            ->addRule(Form::FILLED, 'tato_polozka_je_povinna');
 
         $this->addSubmit('send', 'pokračovat')->setAttribute('class', 'button next')->getControlPrototype()
             ->setName("button")
