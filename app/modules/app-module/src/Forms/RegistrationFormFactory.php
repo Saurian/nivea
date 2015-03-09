@@ -76,13 +76,13 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
         $this->addText('firstname', 'jméno')
             ->addRule(Form::FILLED, 'vyplňte_vaše_křestní_jméno')
             ->setAttribute('placeholder', 'jméno')
-            ->setAttribute("tabindex",4)
+            ->setAttribute("tabindex",3)
             ->controlPrototype->class = 'id-firstname';
 
         $this->addText('lastname', 'příjmení')
             ->addRule(Form::FILLED, 'vyplňte_vaše_příjmení')
             ->setAttribute('placeholder', 'příjmení')
-            ->setAttribute("tabindex",3)
+            ->setAttribute("tabindex",4)
             ->controlPrototype->class = 'id-lastname';
 
         $this->addText('email', 'e-mail')
@@ -95,21 +95,21 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
         $this->addText('street', 'ulice')
             ->addRule(Form::FILLED, 'vyplňte_vaši_ulici')
             ->setAttribute('placeholder', 'ulice')
-            ->setAttribute("tabindex",12)
+            ->setAttribute("tabindex",10)
             ->controlPrototype->class = 'no-margin input-short';
 
         $this->addText('strno', 'č.p.')
             ->addRule(Form::FILLED, 'vyplňte_číslo_popisné')
             // ->addRule(Form::PATTERN, 'vyplňte_číslo_popisné_správně', '[\/0-9]+[aA-zZ]*')
             ->setAttribute('placeholder', 'č.p.')
-            ->setAttribute("tabindex",13)
+            ->setAttribute("tabindex",11)
             ->controlPrototype->class = 'input-shorter';
 
 
         $this->addText('zip', 'PSČ')
             ->addRule(Form::FILLED, 'vyplňte_psč')
             ->setAttribute('placeholder', 'PSČ')
-            ->setAttribute("tabindex",10)
+            ->setAttribute("tabindex",12)
             ->controlPrototype->class = 'no-margin input-shorter';
 
         if ($this->locale == 'hu') {
@@ -131,7 +131,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
         $this->addText('city', 'město')
             ->addRule(Form::FILLED, 'vyplňte_město')
             ->setAttribute('placeholder', 'město')
-            ->setAttribute("tabindex",11)
+            ->setAttribute("tabindex",13)
             ->controlPrototype->class = 'input-short';
 
         $days = array();
@@ -143,7 +143,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             ->setPrompt($this->translator->translate('forms.registrationForm.den'))
             ->setTranslator(null)
             ->addRule(Form::FILLED, 'vyplňte_den_narození')
-            ->setAttribute("tabindex",9)
+            ->setAttribute("tabindex",7)
             ->setAttribute('placeholder', 'den')
             ->addCondition(Form::FILLED)
             ->addRule(Form::RANGE, 'vyplňte_den_narození_správně', array(1,31));
@@ -171,7 +171,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             ->setPrompt($this->translator->translate('forms.registrationForm.rok'))
             ->setTranslator(null)
             ->addRule(Form::FILLED, 'vyplňte_rok_narození')
-            ->setAttribute("tabindex",7)
+            ->setAttribute("tabindex",9)
             ->addCondition(Form::FILLED)
             ->addRule(Form::RANGE, 'musíte_být_starší_x_let', array(null, $currentYear - self::MIN_YEARS));
         $this['year']->controlPrototype->class = 'select-year';

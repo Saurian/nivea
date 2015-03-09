@@ -49,7 +49,8 @@ class QuizFormFactory extends BasicForm implements IQuizFormFactory
     function create()
     {
         $this->addTextArea('quizOne', null, 50, 15)
-            ->addRule(Form::FILLED, 'tato_polozka_je_povinna');
+            ->addRule(Form::FILLED, 'tato_polozka_je_povinna')
+            ->addRule(Form::MAX_LENGTH, 'povolena_delka', 2500);
 
         $this->addSubmit('send', 'pokračovat')->setAttribute('class', 'button next')->getControlPrototype()
             ->setName("button")

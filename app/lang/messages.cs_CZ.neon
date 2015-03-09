@@ -12,26 +12,23 @@ title_děkujeme: "DĚKUJEME, VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY"
 
 # --- homepage ---
 homepage:
-úvodní_popis: "OTESTUJTE NOVINKU"
-text1: "LEHKÝ ZDOKONALUJÍCÍ KRÉM<br>CELLULAR PERFECT SKIN"
-text2: "Stačí odpovědět na následující otázky:"
-
+úvodní_popis: "Vykouzlete vlastní pohádku<strong>a vyhrajte!</strong>"
+text1: "<p><strong>Vymysleli jste pro Bětku, Čendu, králíka a vílu vlastní příběh?</strong><br>Zašlete nám ho! Nejpovedenější příběhy zveřejníme a jejich autory odměníme<br>kompletní pohádkovou limitovanou edicí NIVEA Creme.</p>"
 zbyva: "Ještě můžete napsat"
 znaku: "znaků"
 
 chci_testovat: "CHCI TESTOVAT"
-přihláška_do: "Do testování se můžete přihlásit od 30. 1. do 8. 2. 2015."
+přihláška_do: "Soutěž probíhá od 16. 3. do 19. 4. 2015."
 úplná_pravidla: "úplná pravidla"
 url_pravidla: "http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info"
 
 # --- registration ---
 registrace: REGISTRACE
-text_registrace1: "Vyhrajte"
-text_registrace2: "Zpevňující balíček Nivea"
-text_registrace3: "Chcete-li se zapojit do testování, vyplňte prosím krátký formulář"
-povinná_pole: "Pole označená * jsou povinná.<br>Do testování se můžete přihlásit od 30. 1. do 8. 2. 2015."
+text_registrace1: "<strong>Registrační<br>formulář</strong>"
+text_registrace2: "Chcete-li se zapojit do soutěže, vyplňte prosím krátký formulář:"
+povinná_pole: "Pole označená * jsou povinná.<br>Soutěž probíhá od 16. 3. do 19. 4. 2015."
 
-zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: "Zaškrtnutím tohoto políčka a odesláním formuláře dobrovolně souhlasím, že poskytnuté údaje v rozsahu formuláře budou zpracovány pro účely vyhodnocení soutěže. V případě, že udělím souhlas k zasílání obchodních sdělení - informací e-mailem - viz. druhé políčku souhlasu, tak budou uvedené údaje zpracovány i pro účely stanovené v bodě 2. %politiky_ochrany_soukromí%. Potvrzuji, že jsem si pečlivě pročetl/a podmínky zpracování údajů dle Politiky ochrany soukromí a %pravidla_soutěže% <br>a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
+zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: "Zaškrtnutím tohoto políčka a odesláním formuláře dobrovolně souhlasím, že poskytnuté údaje v rozsahu formuláře budou zpracovány pro účely vyhodnocení soutěže. V případě, že udělím souhlas<br />k zasílání obchodních sdělení - informací e-mailem - viz. druhé políčku souhlasu, tak budou uvedené údaje zpracovány i pro účely stanovené v bodě 2. %politiky_ochrany_soukromí%. Potvrzuji, že jsem si pečlivě pročetl/a podmínky zpracování údajů dle Politiky ochrany soukromí a %pravidla_soutěže% <br>a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
 
 
 politiky_ochrany_soukromí: "Politiky ochrany soukromí"
@@ -39,7 +36,7 @@ pravidla_soutěže: "Pravidla soutěže"
 potvrzuji_pečlivé_pročtení: "a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
 a: "a"
 zpet: "zpět"
-datum_narozeni: "datum narození"
+datum_narozeni: "datum narození *"
 
 email_již_existuje: 'Vámi zadaná emailová adresa již existuje'
 email_nenalezen: 'e-mail nebyl nalezen'
@@ -47,13 +44,12 @@ email_send: 'e-mail byl odeslán'
 email_fail: 'e-mail se nepodařilo odeslat'
 
 # --- Poděkování ---
-děkujeme: DĚKUJEME
-udaje_uloženy: "VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY."
-odesílací_informace: "V případě, že budete vybrána pro testování, budeme vás kontaktovat na e-mail uvedený při registraci."
-děkující_titulek: "OBJEVTE DALŠÍ VARIANTY TĚLOVÉHO MLÉKA DO SPRCHY"
-děkující_popisek: "Nový snadný způsob péče o pokožku si můžete užít hned v několika voňavých variantách."
+děkujeme: "<strong>Děkujeme</strong>VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY."
+odesílací_informace: "V případě výhry vás budeme kontaktovat na e-mail<br>uvedený při registraci."
+děkující_titulek: "NIVEA<br>POHÁDKY"
+děkující_popisek: "Vychutnejte si spolu<br>se svými dětmi kouzelné<br>chvíle během společného<br>čtení."
 děkujeme_pokračovat: "Pokračovat"
-url_pokračovat: "http://www.nivea.cz/Vyrobky/Pece-o-telo/Telova-mleka-do-sprchy"
+url_pokračovat: "http://www.nivea.cz/pohadky"
 
 
 # --- links ---

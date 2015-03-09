@@ -5,7 +5,7 @@
 # http://nette.org/security-warning
 #
 parameters:
-	lang: hu
+	lang: cs
 	contest:
 		omnitureIframe: false
 		test: true

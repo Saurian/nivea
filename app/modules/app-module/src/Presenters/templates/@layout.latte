@@ -26,7 +26,7 @@
 
 <body n:class="$name">
 	<script> document.documentElement.className+=' js' </script>
-
+    <div class="bgr">
 	<div class="container">
 		<div n:foreach="$flashes as $flash" class="flash error-messages {$flash->type}"><p class="message">{$flash->message}</p></div>
 		<div class="content">
@@ -35,7 +35,7 @@
 			{block popup}{/block}
 		</div>
 	</div>
-
+    </div>
 	{block scripts}
 		<script src="{$basePath}/js/netteForms.js"></script>
 		<script src="{$basePath}/js/select2.js"></script>

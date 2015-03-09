@@ -54,11 +54,11 @@ registrationForm:
 	vyplňte_psč: 'Prosím, vyplňte vaše PSČ.'
 	vyplňte_psč_správně: 'Prosím, vyplňte vaše PSČ v platném formátu.'
 	vyplňte_město: 'Prosím, vyplňte vaše město.'
-	vyplňte_den_narození: 'Vyplňte den narození'
-	vyplňte_den_narození_správně: 'Den narození musí být v rozmezí 1-31'
-	vyplňte_měsíc_narození: 'Vyplňte měsíc narození'
-	vyplňte_měsíc_narození_správně: 'Měsíc narození musí být v rozmezí 1-12'
-	vyplňte_rok_narození: 'Vyplňte rok narození'
+	vyplňte_den_narození: 'Den narození musí být v rozmezí 1-31.'
+	vyplňte_den_narození_správně: 'Den narození musí být v rozmezí 1-31.'
+	vyplňte_měsíc_narození: 'Měsíc narození musí být v rozmezí 1-12.'
+	vyplňte_měsíc_narození_správně: 'Měsíc narození musí být v rozmezí 1-12.'
+	vyplňte_rok_narození: 'Musíte být starší 16 let.'
 	musíte_být_starší_x_let: 'Musíte být starší 16 let.'
 	souhlas_se_zařazením_do_soutěže: "Zaškrtnutím tohoto políčka a odesláním formuláře dobrovolně souhlasím, že poskytnuté údaje v rozsahu formuláře budou zpracovány pro účely vyhodnocení soutěže. V případě, že udělím souhlas k zasílání obchodních sdělení - informací e-mailem - viz. druhé políčku souhlasu, tak budou uvedené údaje zpracovány i pro účely stanovené v bodě 2. %politiky_ochrany_soukromí%. Potvrzuji, že jsem si pečlivě pročetl/a podmínky zpracování údajů dle Politiky ochrany soukromí a %pravidla_soutěže% a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
 	potvrďte_souhlas_s_pravidly_soutěže: 'Prosím potvrďte souhlas s Politikou ochrany soukromí a Pravidly soutěže.'
@@ -68,7 +68,7 @@ registrationForm:
 	ne: ne
 
 quizForm:
-	pokračovat: 'pokračovat'
-
-	tato_polozka_je_povinna: 'Odpovězte prosím na otázky'
-	spatna_odpoved: 'Toto je špatná odpověď'
+	pokračovat: 'odeslat pohádku'
+    
+	tato_polozka_je_povinna: 'Vyplňte text pohádky.'
+	spatna_odpoved: 'Sem vložte text své vlastní pohádky...'
