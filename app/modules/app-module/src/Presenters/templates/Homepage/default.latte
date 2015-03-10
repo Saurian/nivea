@@ -3,14 +3,14 @@
 	{include parent}
 	<script type="text/javascript">
     $(document).ready(function() {
-    
+
     var maxLength = 2500;
     $('textarea').keyup(function() {
       var length = $(this).val().length;
       var length = maxLength-length;
       $('#chars').text(length);
     });
-    
+
     });
     </script>
 {/block}
@@ -23,7 +23,11 @@
 <div id="story-block">
 {form quizForm}
     {input quizOne}
-    <div class="story-block-info">{!_zbyva} <strong id="chars">2500</strong> {!_znaku}</div>
+    {if $locale=='hu'}
+	<div class="story-block-info"><strong id="chars">2500</strong> {!_zbyva}</div>
+	{else}
+	<div class="story-block-info">{!_zbyva} <strong id="chars">2500</strong> {!_znaku}</div>
+	{/if}
     <div n:if="$canRegister">{input send}</div>
 {/form}   
   {capture $url}{_url_pravidla}{/capture}

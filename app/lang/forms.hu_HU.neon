@@ -42,9 +42,9 @@ registrationForm:
 	ne: nem
 
 quizForm:
-	pokračovat: 'REGISZTRÁLJ AZ INGYENES TERMÉKTESZTRE!'
+	pokračovat: 'Elküldöm a mesémet!'
 	tato_polozka_je_povinna: 'Kérjük, válaszolj a kérdésre!'
-	spatna_odpoved: 'A kérdésre rosszul válaszoltál.'
+	spatna_odpoved: 'Illeszd be itt a mesédet!'
 	otazka_za_A: 'A szokásos éjszaki arckrémünk helyett.'
 	otazka_za_B: 'Naponta kétszer, a szokásos nappali és esti arckrémünk felvitele előtt.'
 	otazka_za_C: 'Alapozó helyett.'

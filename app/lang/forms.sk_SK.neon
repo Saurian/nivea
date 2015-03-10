@@ -31,7 +31,7 @@ registrationForm:
 	vyplňte_psč: 'Prosím, vyplňte vaše PSČ.'
 	vyplňte_psč_správně: 'Prosím, vyplňte vaše PSČ v platnom formáte.'
 	vyplňte_město: 'Prosím, vyplňte vaše mesto.'
-	vyplňte_den_narození_správně: 'Deň narodenia musí byť v rozmedzí 1-31.'
+	vyplňte_den_narození_správně: 'Deň narodenia musí byť v rozmedzí 1 - 31.'
 	vyplňte_měsíc_narození_správně: 'Mesiac narodenia musí byť v rozmedzí 1 - 12.'
 	musíte_být_starší_x_let: 'Musíte mať viac ako 16 rokov.'
 	souhlas_se_zařazením_do_soutěže: 'Zaškrtnutím tohto políčka a odoslaním formulára dobrovoľne súhlasím, že poskytnuté údaje v rozsahu formulára budú spracované pre účely vyhodnotenia súťaže. V prípade, že udelím súhlas na zasielanie obchodných informácií - informácií e-mailom - pozri. druhé políčko súhlasu, tak budú uvedené údaje spracované i pre účely stanovené v bode 2. Politiky ochrany súkromia. Potvrdzujem, že som si starostlivo prečítal/a podmienky spracovania údajov podľa Politiky ochrany súkromia a Pravidlá súťaže a súhlasím s nimi. Súhlas udeľujem na dobu do jeho odvolania.'
@@ -39,29 +39,12 @@ registrationForm:
 	posílat_newsletter: 'Prajem si e-mailom dostávať informácie o ďalších aktivitách, súťažiach a novinkách spoločnosti Beiersdorf Slovakia, s.r.o.'
 	ano: áno
 	ne: nie
+	vyplňte_den_narození: 'Deň narodenia musí byť v rozmedzí 1 - 31.'
+	vyplňte_měsíc_narození: 'Mesiac narodenia musí byť v rozmedzí 1 - 12.'
+	vyplňte_rok_narození: 'Musíte mať viac ako 16 rokov.'    
 
 quizForm:
-	jak_velký_podíl_má_sluneční_záření_na_tvorbě_vrásek: 'Jak velký podíl má sluneční záření na tvorbě vrásek, pigmentových skvrn a dalších známek stárnutí pleti?'
-	jak_působí_účinná_látka_lumicinol_na_pleť: 'Jak působí účinná látka lumicinol na pleť?'
-	jaký_je_rozdíl_mezi_denní_a_noční_péčí: 'Jaký je rozdíl mezi denní a noční péčí řady NIVEA Cellular Perfect Skin?'
-
-	vyplňte_jednu_možnost_1: 'Prosím, vyplňte jak velký podíl má sluneční záření na tvorbě vrásek, pigmentových skvrn a dalších známek stárnutí pleti.'
-	vyplňte_jednu_možnost_2: 'Prosím, vyplňte jak působí účinná látka lumicinol na pleť.'
-	vyplňte_jednu_možnost_3: 'Prosím, vyplňte jaký je rozdíl mezi denní a noční péčí řady NIVEA Cellular Perfect Skin.'
-
-	pokračovat: 'chcem testovať'
-	a: 'a'
-	b: 'b'
-	c: 'c'
-
-	a.1: 'Až 40%'
-	b.1: 'Až 60%'
-	c.1: 'Až 80%'
-
-	a.2: 'Reguluje nadprodukci pigmentu melaninu, která způsobuje vznik pigmentových skvrn.'
-	b.2: 'Působí jako make-up a přebarví přirozený tón pleti.'
-	c.2: 'Zpevňuje pleť a vyhlazuje vrásky.'
-
-	a.3: 'Intenzivní noční péče obsahuje více pigmentů.'
-	b.3: 'Intenzivní noční péče obsahuje navíc beta karoten, který má vliv na barvu pleti.'
-	c.3: 'Intenzivní noční péče má nejvyšší koncentraci účinné látky lumicinol, která redukuje pigmentové skvrny a sjednocuje tón pleti.'
+	pokračovat: 'Odoslať rozprávku'
+    
+	tato_polozka_je_povinna: 'Vložte text rozprávky.'
+	spatna_odpoved: 'Sem vložte text svojej vlastnej rozprávky . . .'
