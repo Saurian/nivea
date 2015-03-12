@@ -6,9 +6,9 @@ vaše_nové_heslo: "Dobrý den,\nvaše nové heslo do Nivea soutěže je %d%"
 
 
 # --- title ---
-title_homepage: "NIVEA zpevnující mléko do sprchy"
-title_registration: "NIVEA registrace"
-title_děkujeme: "DĚKUJEME, VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY"
+title_homepage: "NIVEA - Írd meg saját meséd és nyerj!"
+title_registration: "regisztráció"
+title_děkujeme: "KÖSZÖNJÜK, ADATAIDAT SIKERESEN ELMENTETTÜK."
 
 # --- homepage ---
 úvodní_popis: 'Írd meg saját meséd és nyerj!'
@@ -18,13 +18,13 @@ chci_testovat: "SZERETNÉM KIPRÓBÁLNI!"
 přihláška_do: "A tesztelésre február 26-tól április 26-ig jelentkezhetsz."
 úplná_pravidla: "Játékszabályzat"
 url_pravidla: "http://www.nivea.hu/A-NIVEA-vilaga/ext/hu-HU/nivea_games_and_rules"
-zbyva: "karaktered maradt még."
+zbyva: "karaktered maradt még"
 
 # --- registration ---
 registrace: REGISTRACE
-text_registrace1: "<strong>NIVEA <br>regisztráció</strong>"
+text_registrace1: "<strong>regisztráció</strong>"
 text_registrace2: "Kérjük, töltsd ki pontosan az összes mezőt! Mielőtt a regisztrációdat véglegesíted,<br />kérjük, hogy nézd át az adatokat, hogy amennyiben a nyertesek között leszel, a nyereményed valóban célba érjen!"
-povinná_pole: "A *-al jelölt mezők kitöltése kötelező<br>A játék időtartama: 2015.03.16. – 2015.04.19."
+povinná_pole: "A *-al jelölt mezők kitöltése kötelező<br>A játék időtartama: 2015.03.16. – 2015.05.31."
 
 zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: 'A jelölőnégyzet bejelölésével és az adataim elküldésével önkéntesen hozzájárulok a fenti információk feldolgozásához a promóciós tesztben való részvétel céljából és vonatkozásában. Amennyiben hozzájárulásomat adom ahhoz, hogy a Beiersdorf Kft. részemre e-mail útján kereskedelmi ajánlatokat és információkat küldjön (lásd a második hozzájárulás mezőt), tudomásul veszem, hogy az általam megadott adatok feldolgozása is az Adatkezelési Irányelvek 2. pontjában felsorolt célokra történik. Kijelentem, hogy alaposan elolvastam és megértettem az Adatkezelési Irányelveknek megfelelő adatkezelési feltételeket, a Játékszabályzatot és ezeket elfogadom. Hozzájárulásom visszavonásig érvényes.'
 politiky_ochrany_soukromí: "Politiky ochrany soukromí"
@@ -44,8 +44,8 @@ děkujeme: "<strong>Köszönjük!</strong>ADATAIDAT SIKERESEN ELMENTETTÜK."
 odesílací_informace: "A nyerteseket e-mailben értesítjük."
 děkující_titulek: "NIVEA<br>MESEVILÁG"
 děkující_popisek: "Élvezd gyermekeiddel együtt<br> a mesélés és az olvasás varázslatos pillanatait!"
-děkujeme_pokračovat: "Mesék"
-url_pokračovat: "http://www.nivea.cz/mesevilag"
+děkujeme_pokračovat: "Mesék elolvasása"
+url_pokračovat: "http://www.nivea.hu/mesevilag"
 
 
 # --- links ---

@@ -12,7 +12,7 @@ registrationForm:
 	příjmení: priezvisko *
 	e-mail: e-mail *
 	ulice: ulica *
-	č.p.: č.p. *
+	č.p.: p.č. *
 	PSČ: PSČ *
 	heslo: heslo *
 	heslo_znovu: heslo pro kontrolu *
@@ -35,7 +35,7 @@ registrationForm:
 	vyplňte_měsíc_narození_správně: 'Mesiac narodenia musí byť v rozmedzí 1 - 12.'
 	musíte_být_starší_x_let: 'Musíte mať viac ako 16 rokov.'
 	souhlas_se_zařazením_do_soutěže: 'Zaškrtnutím tohto políčka a odoslaním formulára dobrovoľne súhlasím, že poskytnuté údaje v rozsahu formulára budú spracované pre účely vyhodnotenia súťaže. V prípade, že udelím súhlas na zasielanie obchodných informácií - informácií e-mailom - pozri. druhé políčko súhlasu, tak budú uvedené údaje spracované i pre účely stanovené v bode 2. Politiky ochrany súkromia. Potvrdzujem, že som si starostlivo prečítal/a podmienky spracovania údajov podľa Politiky ochrany súkromia a Pravidlá súťaže a súhlasím s nimi. Súhlas udeľujem na dobu do jeho odvolania.'
-	potvrďte_souhlas_s_pravidly_soutěže: 'Prosím, potvrďte súhlas s Politikou ochrany súkromia a Pravidlami súťaže'
+	potvrďte_souhlas_s_pravidly_soutěže: 'Prosím, potvrďte súhlas s Politikou ochrany súkromia a Pravidlami súťaže.'
 	posílat_newsletter: 'Prajem si e-mailom dostávať informácie o ďalších aktivitách, súťažiach a novinkách spoločnosti Beiersdorf Slovakia, s.r.o.'
 	ano: áno
 	ne: nie

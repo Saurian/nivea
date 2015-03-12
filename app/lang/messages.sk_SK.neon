@@ -3,7 +3,7 @@ email:
 	header: 'Zapomenuté heslo'
 
 # --- title ---
-title_homepage: "NIVEA Spevňujúce mlieko do sprchy"
+title_homepage: "NIVEA - vykúzlite vlastnú rozprávku"
 title_registration: "NIVEA Registrácia"
 title_děkujeme: 'ĎAKUJEME, VAŠE ÚDAJE BOLI ÚSPEŠNE ULOŽENÉ.'
 
@@ -14,7 +14,7 @@ text1: "<p><strong>Vymysleli ste pre Tinku, Šimona, králika a vílu vlastný p
 zbyva: "Ešte môžete napísať"
 znaku: "znakov"
 
-přihláška_do: "Súťaž prebieha od 16. 3. do 19. 4. 2015."
+přihláška_do: "Súťaž prebieha od 16. 3. do 30. 6. 2015."
 úplná_pravidla: "ÚPLNÉ PRAVIDLÁ"
 url_pravidla: "http://www.nivea.sk/Tipy-and-rady/ext/sk-SK/2011_06_vyherci_info"
 
@@ -23,10 +23,10 @@ url_pravidla: "http://www.nivea.sk/Tipy-and-rady/ext/sk-SK/2011_06_vyherci_info"
 registrace: REGISTRACE
 text_registrace1: "<strong>Registrační<br>formulář</strong>"
 text_registrace2: "Ak sa chcete zapojiť do súťaže, vyplňte, prosím, krátky formulár:"
-povinná_pole: "Polia označené * sú povinné.<br>Súťaž prebieha od 16. 3. do 19. 4. 2015."
+povinná_pole: "Polia označené * sú povinné.<br>Súťaž prebieha od 16. 3. do 30. 6. 2015."
 
 
-zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: 'Zaškrtnutím tohto políčka a odoslaním formulára dobrovoľne súhlasím, že poskytnuté údaje v rozsahu formulára budú spracované pre účely vyhodnotenia súťaže. V prípade, že udelím súhlas na zasielanie obchodných informácií - informácií e-mailom - pozri. druhé políčko súhlasu, tak budú uvedené údaje spracované i pre účely stanovené v bode 2. %politiky_ochrany_soukromí%. Potvrdzujem, že som si starostlivo prečítal/a podmienky spracovania údajov podľa Politiky ochrany súkromia a %pravidla_soutěže% a súhlasím s nimi. Súhlas udeľujem na dobu do jeho odvolania.'
+zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: 'Zaškrtnutím tohto políčka a odoslaním formulára dobrovoľne súhlasím, že poskytnuté údaje<br> v rozsahu formulára budú spracované pre účely vyhodnotenia súťaže. V prípade, že udelím súhlas na zasielanie obchodných informácií - informácií e-mailom - pozri druhé políčko súhlasu, tak budú uvedené údaje spracované i pre účely stanovené v bode 2. %politiky_ochrany_soukromí%. Potvrdzujem,<br> že som si starostlivo prečítal/a podmienky spracovania údajov podľa Politiky ochrany súkromia<br> a %pravidla_soutěže% a súhlasím s nimi. Súhlas udeľujem na dobu do jeho odvolania.'
 
 
 

@@ -38,7 +38,7 @@ registrationForm:
 	PSČ: PSČ *
 	heslo: heslo *
 	heslo_znovu: heslo pro kontrolu *
-	město: měslo *
+	město: město *
 	zvolte_vaše_pohlaví: "Prosím, zvolte vaše pohlaví."
 	vyplňte_e-mail: "Prosím, vyplňte e-mail."
 	vyplňte_platný_e-mail: "Prosím, vyplňte email v platném formátu."

@@ -2,7 +2,7 @@
 {block content}
 
 <h1>{!_text_registrace1}</h1>
-<p class="">{!_text_registrace2}</p>
+<p>{!_text_registrace2}</p>
 
 <div class="form-block">
 
@@ -18,8 +18,13 @@
 					</div>
 				{/foreach}
 
+				{if $locale == 'hu'}
+				<div class="row-col">{input lastname}</div>
+				<div class="row-col">{input firstname}</div>
+				{else}
 				<div class="row-col">{input firstname}</div>
 				<div class="row-col">{input lastname}</div>
+				{/if}
 			</div>
 
 			<div class="clearfix form-row">
@@ -32,13 +37,13 @@
 
 					<div class="birth-select">
 						{if $locale == 'hu'}
-							{input year}
-							{input month}
-							{input day}
+						{input year}
+						{input month}
+						{input day}
 						{else}
-							{input day}
-							{input month}
-							{input year}
+						{input day}
+						{input month}
+						{input year}
 						{/if}
 					</div>
 				</div>
@@ -46,23 +51,23 @@
 
 			<div class="clearfix form-row">
 				{if $locale == 'hu'}
-					<div class="row-col vtop half">
-						{input zip}
-						{input city}
-					</div>
-					<div class="row-col half">
-						{input street}
-						{input strno}
-					</div>
+				<div class="row-col vtop half">
+					{input zip}
+					{input city}
+				</div>
+				<div class="row-col half">
+					{input street}
+					{input strno}
+				</div>
 				{else}
-					<div class="row-col half">
-						{input street}
-						{input strno}
-					</div>
-					<div class="row-col birth vtop half">
-						{input zip}
-						{input city}
-					</div>
+				<div class="row-col half">
+					{input street}
+					{input strno}
+				</div>
+				<div class="row-col birth vtop half">
+					{input zip}
+					{input city}
+				</div>
 				{/if}
 			</div>
 

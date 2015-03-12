@@ -141,7 +141,7 @@ hr { background: url(../images/hr.png) 0 0 no-repeat; border: none; display: blo
 #story-block textarea { width: 375px; height: 225px; padding: 20px; font-family: Arial, Helvetica, sans-serif; color: #7f5612; background: #fff6dc; margin-bottom: 5px; }
 #story-block .story-block-info { color: #7f5612; }
 
-#story-block .button { background: #dce9eb; border: 2px solid #FFFFFF; height: 50px; line-height: 40px;font-family: "nivea_light_ot"; font-size: 20px; color: #00177f; padding: 0 25px; display: inline-block; margin-top: 70px; margin-bottom: 20px;
+#story-block .button { background: #dce9eb; border: 2px solid #FFFFFF; height: 50px; line-height: 40px;font-family: "niveaboldtextscreenot"; font-size: 20px; color: #00177f; padding: 0 25px; display: inline-block; margin-top: 70px; margin-bottom: 20px;
 -webkit-border-radius: 23px;
 -moz-border-radius: 23px;
 border-radius: 23px;
@@ -152,7 +152,7 @@ border-radius: 23px;
 
 #story-block .button-secondary { color: #ffffff; background-image: url(../images/button-arrow.png); float: none; display: inline-block; position: relative; left: 70px; }
 
-.form-block .button { background: #dce9eb; border: 2px solid #FFFFFF; font-family: "nivea_light_ot"; font-size: 17px; color: #00177f; padding: 0 15px; margin-bottom: 20px;
+.form-block .button { background: #dce9eb; border: 2px solid #FFFFFF; font-family: "niveaboldtextscreenot"; font-size: 17px; color: #00177f; padding: 0 15px; margin-bottom: 20px;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 border-radius: 20px;
