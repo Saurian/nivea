@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_02_InShower
  *
  * Copyright (c) 2015
  *

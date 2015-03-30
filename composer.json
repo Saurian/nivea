@@ -1,6 +1,6 @@
 {
-    "name": "pixman/nivea-2015-02-q10plus",
-    "description": "Nivea Q10 plus",
+    "name": "pixman/nivea-2015-04-make_up_starter",
+    "description": "Nivea Make Up Starter",
     "minimum-stability": "stable",
     "keywords": ["devrun"],
     "license": "proprietary",
@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "nette/nette": "~2.2.0",
+        "nette/nette": "~2.3.0",
         "kdyby/doctrine": "v2.1.0",
         "kdyby/translation": "v2.0.3",
         "janmarek/webloader": "2.2.0",

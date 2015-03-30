@@ -1,15 +1,43 @@
-{block title}{_title_registration}{/block}
+{block title}{_messages.registration.title}{/block}
 {block content}
+{capture $from}{$registerFrom|date:'j. n. Y'}{/capture}
+{capture $to}{$registerTo|date:'j. n. Y'}{/capture}
 
-<h1><strong>TESZTELD INGYENESEN AZ ÚJ Q10PLUS RÁNCTALANÍTÓ SZÉRUM GYÖNGYÖKET!</strong>REGISZTRÁCIÓ</h1>
-<div class="reg-text">Ha szeretnéd kipróbálni a terméket, kérjük, töltsd ki pontosan az összes mezőt! 
-Mielőtt a regisztrációdat véglegesíted, kérjük, hogy nézd át az adatokat, 
-hogy amennyiben a nyertesek között leszel, a nyereményed valóban célba érjen!</div>
+<h1><strong>{_messages.registration.popis}</strong>{_messages.registration.registrace}</h1>
+
+<div n:class="$locale == 'Qhu' ? long-container">
+	<div n:class="$locale == 'Qhu' ? long-content">
+		<p>{_messages.registration.text_registrace1}</p>
+	</div>
+</div>
 
 <div class="form-block">
 
 	{form registrationForm}
 		<fieldset class="register">
+			<div class="clearfix form-row">
+				<div class="row-col half">{_messages.registration.use_product}</div>
+				<div class="row-col half">
+					{foreach $form['use_makeup']->items as $key => $label}
+					<div class="block-inline">
+						<input n:name="use_makeup:$key">
+						<label n:name="use_makeup:$key">{_forms.registrationForm.$label}</label>
+					</div>
+					{/foreach}
+				</div>
+			</div>
+
+			<div class="clearfix form-row">
+				<div class="row-col half">{_messages.registration.skin_type}</div>
+				<div class="row-col half">
+					{foreach $form['skin_type']->items as $key => $label}
+					<div class="block-inline">
+						<input n:name="skin_type:$key">
+						<label n:name="skin_type:$key">{_forms.registrationForm.$label}</label>
+					</div>
+					{/foreach}
+				</div>
+			</div>
 
 			<div class="clearfix form-row">
 				{foreach $form['gender']->items as $key => $label}
@@ -21,14 +49,15 @@ hogy amennyiben a nyertesek között leszel, a nyereményed valóban célba érj
 					</div>
 				{/foreach}
 
-				<div class="row-col">
-					{input lastname}
-				</div>
+				{if $locale == 'hu'}
+					<div class="row-col">{input lastname}</div>
+					<div class="row-col">{input firstname}</div>
+				{else}
+					<div class="row-col">{input firstname}</div>
+					<div class="row-col">{input lastname}</div>
+				{/if}
 
-			<div class="row-col">
-					{input firstname}
-				</div>
-				</div>
+			</div>
 
 			<div class="clearfix form-row">
 				<div class="row-col half vbottom">
@@ -76,32 +105,28 @@ hogy amennyiben a nyertesek között leszel, a nyereményed valóban célba érj
 			</div>
 
 			<div class="clearfix">
-				<p>{!_povinná_pole}</p>
+				<p>{_messages.registration.required_item}<br>{_messages.registration.application_from_to, ['from' => $from, 'to' => $to]}</p>
 			</div>
 
-			<div class="small-label">
-                <div n:class="$locale == 'hu' ? 'clearfix checkblock blue' : 'clearfix checkblock'">
-    				<label>
-    					{capture $rule}<a target="_blank" class="track-external" data-url="{_rules_url}" href="{_rules_url}">{_pravidla_soutěže}</a>{/capture}
-    					{capture $policy}<a target="_blank" class="track-external" data-url="{_policy_policy_url}" href="{_policy_policy_url}">{_politiky_ochrany_soukromí}</a>{/capture}
-    
-    					<input n:name="privacy">{!_zaškrtnutím_tohoto_políčka_a_odesláním_formuláře, null, [
-    					'politiky_ochrany_soukromí'=>$policy,
-    					'pravidla_soutěže'=>$rule,
-    					]}
-    				</label>
-    			</div>
-    			<div n:class="$locale == 'hu' ? 'clearfix checkblock blue' : 'clearfix checkblock'">
-    				<span class="newsletter">{input newsletter}</span>
-                    <label>{!_'forms.registrationForm.posílat_newsletter'}</label>
-    			</div>
-            </div>
-			
+			<div n:class="$locale == 'hu' ? 'clearfix checkblock blue' : 'clearfix checkblock'">
+				{capture $rule}<a target="_blank" class="track-external" data-url="{_messages.registration.rules_url}" href="{_messages.registration.rules_url}">{_messages.registration.rules}</a>{/capture}
+				{capture $policy}<a target="_blank" class="track-external" data-url="{_messages.registration.policy_url}" href="{_messages.registration.policy_url}">{_messages.registration.policy}</a>{/capture}
+				<label>
+					<input n:name="privacy">
+					{!_messages.registration.privacy_info, null, ['politiky'=>$policy, 'pravidla'=>$rule,]}
+				</label>
+			</div>
+			<div n:class="$locale == 'hu' ? 'clearfix checkblock blue' : 'clearfix checkblock'">
+				<label>
+					<input n:name="newsletter">
+					{!_forms.registrationForm.posílat_newsletter}
+				</label>
+			</div>
 			{input send}
 
-			<a n:href="Homepage:" class="button-secondary back clearfix track-btn" data-name="back-click">{_zpet}</a>
+			<a n:href="Homepage:" class="button-secondary back clearfix track-btn" data-name="back-click">{_messages.registration.back}</a>
 		</fieldset>
 	{/form}
-    
+
 </div>
 

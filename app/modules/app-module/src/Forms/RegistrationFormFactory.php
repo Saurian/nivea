@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_02_InShower
  *
  * Copyright (c) 2015
  *
@@ -17,8 +17,6 @@ use AppModule\Entities\UserEntity;
 use AppModule\Managers\TransactionListener;
 use AppModule\Managers\UserManager;
 use Kdyby\Translation\ITranslator;
-use Kdyby\Translation\PrefixedTranslator;
-use Kdyby\Translation\Translator;
 use Nette\Forms\Form;
 use Nette;
 
@@ -66,23 +64,40 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
     {
         $this->addGroup();
 
+        $this->addRadioList('use_makeup', 'use_makeup', array(
+            'everyDay' => 'every_day',
+            'severalWeek' => 'several_times_a_week',
+            'severalMonth' => 'several_times_a_month',
+            'lessOften' => 'less_often',
+            'notUse' => 'not_use'))
+            ->addRule(Form::FILLED, 'select_use_makeup')
+            ->setAttribute("tabindex",0)
+            ->controlPrototype->class = 'inline-item track';
+
+        $this->addRadioList('skin_type', 'skin_type', array(
+            'drySensitive' => 'dry_sensitive',
+            'normal' => 'normal'))
+            ->addRule(Form::FILLED, 'select_skin')
+            ->setAttribute("tabindex",1)
+            ->controlPrototype->class = 'inline-item track';
+
         $this->addRadioList('gender', 'pohlaví', array(0 => 'žena', 1 => 'muž'))
             ->setValue(0)
             ->setDefaultValue(0)
             ->addRule(Form::FILLED, 'zvolte_pohlaví')
-            ->setAttribute("tabindex",1)
+            ->setAttribute("tabindex",2)
             ->controlPrototype->class = 'inline-item';
 
         $this->addText('firstname', 'jméno')
             ->addRule(Form::FILLED, 'vyplňte_vaše_křestní_jméno')
             ->setAttribute('placeholder', 'jméno')
-            ->setAttribute("tabindex",4)
+            ->setAttribute("tabindex",3)
             ->controlPrototype->class = 'id-firstname';
 
         $this->addText('lastname', 'příjmení')
             ->addRule(Form::FILLED, 'vyplňte_vaše_příjmení')
             ->setAttribute('placeholder', 'příjmení')
-            ->setAttribute("tabindex",3)
+            ->setAttribute("tabindex",4)
             ->controlPrototype->class = 'id-lastname';
 
         $this->addText('email', 'e-mail')
@@ -95,21 +110,21 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
         $this->addText('street', 'ulice')
             ->addRule(Form::FILLED, 'vyplňte_vaši_ulici')
             ->setAttribute('placeholder', 'ulice')
-            ->setAttribute("tabindex",12)
+            ->setAttribute("tabindex",10)
             ->controlPrototype->class = 'no-margin input-short';
 
         $this->addText('strno', 'č.p.')
             ->addRule(Form::FILLED, 'vyplňte_číslo_popisné')
             // ->addRule(Form::PATTERN, 'vyplňte_číslo_popisné_správně', '[\/0-9]+[aA-zZ]*')
             ->setAttribute('placeholder', 'č.p.')
-            ->setAttribute("tabindex",13)
+            ->setAttribute("tabindex",11)
             ->controlPrototype->class = 'input-shorter';
 
 
         $this->addText('zip', 'PSČ')
             ->addRule(Form::FILLED, 'vyplňte_psč')
             ->setAttribute('placeholder', 'PSČ')
-            ->setAttribute("tabindex",10)
+            ->setAttribute("tabindex",12)
             ->controlPrototype->class = 'no-margin input-shorter';
 
         if ($this->locale == 'hu') {
@@ -131,7 +146,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
         $this->addText('city', 'město')
             ->addRule(Form::FILLED, 'vyplňte_město')
             ->setAttribute('placeholder', 'město')
-            ->setAttribute("tabindex",11)
+            ->setAttribute("tabindex",13)
             ->controlPrototype->class = 'input-short';
 
         $days = array();
@@ -142,8 +157,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
         $this->addSelect('day', 'den', $days)
             ->setPrompt($this->translator->translate('forms.registrationForm.den'))
             ->setTranslator(null)
-            ->addRule(Form::FILLED, 'vyplňte_den_narození')
-            ->setAttribute("tabindex",9)
+            ->setAttribute("tabindex",7)
             ->setAttribute('placeholder', 'den')
             ->addCondition(Form::FILLED)
             ->addRule(Form::RANGE, 'vyplňte_den_narození_správně', array(1,31));
@@ -157,7 +171,6 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             ->setPrompt($this->translator->translate('forms.registrationForm.měsíc'))
             ->setTranslator(null)
             ->setAttribute("tabindex",8)
-            ->addRule(Form::FILLED, 'vyplňte_měsíc_narození')
             ->addCondition(Form::FILLED)
             ->addRule(Form::RANGE, 'vyplňte_měsíc_narození_správně', array(1,12));
         $this['month']->controlPrototype->class = 'select-month';
@@ -170,8 +183,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
         $this->addSelect('year', 'rok', $years)
             ->setPrompt($this->translator->translate('forms.registrationForm.rok'))
             ->setTranslator(null)
-            ->addRule(Form::FILLED, 'vyplňte_rok_narození')
-            ->setAttribute("tabindex",7)
+            ->setAttribute("tabindex",9)
             ->addCondition(Form::FILLED)
             ->addRule(Form::RANGE, 'musíte_být_starší_x_let', array(null, $currentYear - self::MIN_YEARS));
         $this['year']->controlPrototype->class = 'select-year';
@@ -187,51 +199,35 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             ->addRule(Form::FILLED, 'potvrďte_souhlas_s_pravidly_soutěže')
             ->controlPrototype->class = 'id-privacy';
 
-        $this->addCheckbox('newsletter')
+        $this->addCheckbox('newsletter', 'posílat_newsletter')
             ->controlPrototype->class = 'id-newsletter';
 
 
-
-
-        $btn = $this->addSubmit('send', 'odeslat')->setAttribute('class', 'send-button button next')->getControlPrototype()
-            ->setName("button")
-            ->create('strong', $this->translator->translate('forms.registrationForm.odeslat'));
+        $btn = $this->addSubmit('send', 'odeslat')->setAttribute('class', 'send-button button next')->getControlPrototype();
+        $btn->setName("button")
+            ->setText($this->translator->translate('forms.registrationForm.odeslat'))
+            ->type = 'submit';
+        $btn->create('strong class="space"');
 
         $this->onSuccess[] = array($this, 'processRegistrationForm');
-        $this->onValidate[] = array($this, 'processValidationForm');
         $this->getElementPrototype()->class = 'registration-form';
 
     }
 
 
-    public function processValidationForm(BasicForm $form)
-    {
-        $presenter = $this->getPresenter();
-        $section = $presenter->getSession($this->section);
-
-        if (!$section->quizOne)
-            $presenter->redirect('Homepage:');
-    }
-
     public function processRegistrationForm(BasicForm $form)
     {
+        $values = $form->getValues();
         $presenter = $this->getPresenter();
-        $section = $presenter->getSession($this->section);
 
         /** @var $entity UserEntity */
-        $entity = $this->getEntity();
+        $entity = $this->entity;
 
-        if (($questions = $entity->getQuestions()) === NULL) {
+        if (($questions = $entity->questions) === NULL) {
             $questions = new QuestionEntity();
+            $questions->setQuizOne($values->use_makeup)->setQuizTwo($values->skin_type);
         }
-
-        foreach ($section as $key => $val) {
-            if (isset($questions->$key)) {
-                $questions->$key = $val;
-            }
-        }
-
-        $entity->setQuestions($questions->setLang($this->locale));
+        $entity->setQuestions($questions);
 
         try {
             $em = $this->getEntityMapper()->getEntityManager();

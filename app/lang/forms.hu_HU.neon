@@ -1,18 +1,38 @@
+lostPswForm:
+	zaslat_na_e-mail: "zaslat na e-mail"
+	e-mail: "e-mail"
+	vyplňte_prosím_e-mail: 'Vyplňte prosím e-mail'
+	vyplňte_email_v_platném_formátu: 'Prosím, vyplňte email v platném formátu.'
+	email_send: 'Heslo bylo odesláno na vámi zvolenou emailovou adresu'
+	email_fail: 'Heslo se nepodařilo odeslat'
+	email_non_exist: 'Vámi zadaný e-mail neexistuje'
+
+loginForm:
+	e-mail: "e-mail"
+	vyplňte_email_v_platném_formátu: 'Prosím, vyplňte email v platném formátu.'
+	vyplňte_prosím_e-mail: 'Vyplňte prosím e-mail'
+	heslo: 'heslo'
+	vyplňte_vaše_heslo: 'Vyplňte vaše heslo.'
+	přihlásit_se: 'přihlásit se'
+	zaslat_zapomenuté_heslo: 'zaslat zapomenuté heslo'
+
 registrationForm:
 	odeslat: 'ELKÜLDÉS'
 	žena: nő
 	muž: férfi
-	den: nap
+	den: év
 	měsíc: hónap
-	rok: év
+	rok: nap
 	zvolte_pohlaví: "Kérjük, add meg a nemed!"
-	zvolte_používání_výrobků: 'Kérjük, válaszolj a kérdésre!'
-	jméno: keresztnév *
-	příjmení: vezetéknév *
+	zvolte_používání_výrobků: 'Kérjük, add meg, hogy használsz-e bőrfeszesítő terméket!'
+	jméno: vezetéknév *
+	příjmení: keresztnév *
 	e-mail: e-mail *
 	ulice: utca *
 	č.p.: hsz. *
 	PSČ: ir.sz.*
+	heslo: heslo *
+	heslo_znovu: heslo pro kontrolu *
 	město: település *
 	vyplňte_e-mail: "Kérjük, írd be az e-mail címed!"
 	vyplňte_platný_e-mail: "Kérjük, az e-mail címed a megfelelő formátumba írd be!"
@@ -31,20 +51,19 @@ registrationForm:
 	vyplňte_den_narození_správně: "A születésnap megadásának a tartományban kell lennie %d"
 	vyplňte_měsíc_narození_správně: "A születésnap hónapjának a 1-12 tartomány közt kell lennie."
 	musíte_být_starší_x_let: "A játékban 18. éven felüliek vehetnek részt!"
-
-	vyplňte_den_narození: "A születésnap megadásának a tartományban kell lennie %d."
-	vyplňte_měsíc_narození: "A születésnap hónapjának a 1-12 tartomány közt kell lennie."
-	vyplňte_rok_narození: "A játékban 18. éven felüliek vehetnek részt!"
-	
 	posílat_newsletter: "Szeretnék e-mailben tájékoztatást kapni a NIVEA további eseményeiről, nyereményjátékairól, promócióiról és híreiről."
-	potvrďte_souhlas_s_pravidly_soutěže: 'Kérjük,<br> fogadd el az adatvédelmi szabályzatot, valamint a játékszabályzatot.'
+	potvrďte_souhlas_s_pravidly_soutěže: 'Kérjük, fogadd el az adatvédelmi szabályzatot, valamint a játékszabályzatot.'
 	ano: igen
 	ne: nem
 
-quizForm:
-	pokračovat: 'REGISZTRÁLJ AZ INGYENES TERMÉKTESZTRE!'
-	tato_polozka_je_povinna: 'Kérjük, válaszolj a kérdésre!'
-	spatna_odpoved: 'A kérdésre rosszul válaszoltál.'
-	otazka_za_A: 'A szokásos éjszaki arckrémünk helyett.'
-	otazka_za_B: 'Naponta kétszer, a szokásos nappali és esti arckrémünk felvitele előtt.'
-	otazka_za_C: 'Alapozó helyett.'
+	select_use_makeup: "Prosím, vyplňte jak často používáte makeup"
+	select_skin: "Prosím, vyplňte typ pleti"
+
+	every_day: každý den
+	several_times_a_week: několikrát za týden
+	several_times_a_month: několikrát za měsíc
+	less_often: méně častěji
+	not_use: nepoužívám
+
+	dry_sensitive: suchá až citlivá
+	normal: normální až smíšená

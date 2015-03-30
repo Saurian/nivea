@@ -2,7 +2,7 @@
 
 /**
  *
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_02_InShower
  *
  * Copyright (c) 2015
  *
@@ -18,6 +18,7 @@ use AppModule\Forms\ILostPswFormFactory;
 use AppModule\Managers\ApplicationManager;
 use AppModule\Managers\UserManager;
 use Nette\Application\UI\Presenter;
+use Nette\DI\Container;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use Tracy\Debugger;
@@ -29,6 +30,7 @@ use WebLoader\Nette\JavaScriptLoader;
  * Base presenter for all application presenters.
  */
 abstract class BasePresenter extends Presenter
+//class BasePresenter extends \App\Presenters\BasePresenter
 {
     /** @persistent */
     public $locale;
@@ -66,6 +68,15 @@ abstract class BasePresenter extends Presenter
     /** @var array[] */
     protected $status;
 
+    /** @var Container */
+    protected $container;
+
+
+    function __construct(Container $container)
+    {
+        $this->container = $container;
+    }
+
 
     protected function startup()
     {
@@ -74,7 +85,7 @@ abstract class BasePresenter extends Presenter
         $user = $this->getUser();
 
         if (!$user->isAllowed($this->name, $this->action)) {
-//             $this->flashMessage($message, 'warning');
+            //$this->flashMessage($message, 'warning');
             $this->redirect('Homepage:', array('backlink' => $this->storeRequest()));
         }
 
@@ -88,9 +99,6 @@ abstract class BasePresenter extends Presenter
         $this->template->keywords    = $this->keywords;
         $this->template->locale      = $regions ? $regions : $this->locale;
         $this->template->webLocale   = $this->locale;
-        $this->template->canRegister =
-            new DateTime() >= DateTime::from($this->getContext()->getParameters()['contest']['registerFrom']) &&
-            date('Y-m-d') <= DateTime::from($this->getContext()->getParameters()['contest']['registerTo']);
 
         $this->template->name = Strings::lower($name[1] . $action . $locale);
         $page = $this->link('this');
@@ -98,7 +106,11 @@ abstract class BasePresenter extends Presenter
         $page = str_replace('/26/2014_11_christmas', '', $page);
         $this->template->page = $page;
 
-        $sysParams = $this->getContext()->getParameters();
+        $sysParams    = $this->container->getParameters();
+        $this->template->registerTo = $registerTo = DateTime::from($sysParams['contest']['registerTo']);
+        $this->template->registerFrom = $registerFrom = DateTime::from($sysParams['contest']['registerFrom']);
+
+        $this->template->canRegister = new DateTime() >= $registerFrom && date('Y-m-d') <= $registerTo;
         $this->template->allowLogin = true;
         $this->template->omnitureIframe = isset($sysParams['contest']) && isset($sysParams['contest']['omnitureIframe'])
             ? $sysParams['contest']['omnitureIframe']

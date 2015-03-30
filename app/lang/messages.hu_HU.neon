@@ -1,110 +1,47 @@
-nivea - Vánoční soutěž: "NIVEA - Adventi nyereményjáték"
+# --- homepage --- #
+homepage:
+	title: NIVEA Make-up Starter
+	popis: OTESTUJTE LEHKÝ PODKLADOVÝ KRÉM
+	popis2: NIVEA Make-up Starter
 
-# --- homepage ---
-úvodní_popis: 'VÁLASZOLJ EGY EGYSZERŰ KÉRDÉSRE, ÉS TESZTELD INGYENESEN AZ ÚJ Q10PLUS RÁNCTALANÍTÓ SZÉRUM GYÖNGYÖKET!'
-text1: 'Győzd le a ráncokat az új Q10Plus Ránctalanító Szérum Gyöngyök<br>erejével! A Q10 koenzimet (a NIVEA Q10Plus arcápoló termékek közül) a legmagasabb koncentrációban tartalmazó formula hialuronsavval segít csökkenteni a meglévő ráncokat és simábbá, puhábbá teszi  a bőrfelszínt. Most ingyenesen kipróbálhatod, ha válaszolsz egy egyszerű kérdésre.'
-nadpis2: 'Hogyan kell használni az új ránctalanító szérumot?'
-chci_testovat: "SZERETNÉM KIPRÓBÁLNI!"
-přihláška_do: "A tesztelésre február 26-tól április 26-ig jelentkezhetsz."
-úplná_pravidla: "RÉSZLETES RÉSZVÉTELI FELTÉTELEK"
-url_pravidla: "http://www.nivea.hu/A-NIVEA-vilaga/ext/hu-HU/nivea_games_and_rules"
+	text1: ZÁKLAD PRO PEFEKTNÍ MAKE-UP
+	text2: "Podkladová báze vyhladí a sjednotí pleť a připraví ji tak pro bezchybné nanesení make-upu. Současně pleti dodá potřebnou dávku hydratace na celý den. Díky ultralehkému složení se vstřebá již během 1 minuty."
+	text3: "<strong>Vyzkoušejte zdarma NIVEA Lehký podkladový krém Make-up Starter</strong>, díky kterému bude váš make-up vypadat lépe a vydrží déle perfektní. Vaši pleť zanechá hydratovanou a hedvábně jemnou."
 
+	application_from_to: Do testování se můžete přihlásit od %from% do %to%.
+	chci_testovat: "CHCI TESTOVAT"
+	pravidla: "úplná pravidla"
+	url_pravidla: "http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info"
 
-# --- title ---
-title_homepage: "NIVEA Q10Plus Zuhanyzás Közebni Bőrfeszesítő Testápoló"
-title_registration: "NIVEA regisztráció"
-title_děkujeme: "KÖSZÖNJÜK, A MEGADOTT ADATOKAT SIKERESEN ELMENTETTÜK!"
+# --- registration --- #
+registration:
+	title: NIVEA Make-up Starter registrace
+	popis: OTESTUJTE Make-up Starter
+	registrace: REGISTRACE
+	text_registrace1: "Chcete-li se zapojit do testování, vyplňte prosím krátký formulář:"
+	use_product: Jak často používáte make-up?
+	skin_type: Jaký je váš typ pleti?
 
+	required_item: Pole označená * jsou povinná.
+	application_from_to: Do testování se můžete přihlásit od %from% do %to%.
 
-přejete si zapálit svou další svíčku: "Szeretnéd meggyújtani Te a következő gyertyát"
-přihlašte se: "Jelentkezz be"
-přihlásit se: "Bejelentkezés"
-přihlášení: "Bejelentkezés"
-přihlásit přes facebook: "Bejelentkezés Facebook-on keresztül"
-ztracené_heslo: "Új jelszó igénylése"
-rozsviťte si: "Gyújtsd meg a"
-nivea vánoce a vyhrajte: "NIVEA adventi koszorún a gyertyát és nyerj"
-facebook logged: "Facebook-on keresztül jelentkeztél be"
-tady: itt található
-soutěž probíhá od 30. 11. do 24. 12. 2014...: "A nyereményjáték időtartama: 2014. 11.30. és 2014.12.24. között. A  teljes játékszabály "
+	privacy_info: "Zaškrtnutím tohoto políčka a odesláním formuláře dobrovolně souhlasím, že poskytnuté údaje v rozsahu formuláře budou zpracovány pro účely vyhodnocení soutěže. V případě, že udělím souhlas k zasílání obchodních sdělení - informací e-mailem - viz. druhé políčku souhlasu, tak budou uvedené údaje zpracovány i pro účely stanovené v bodě 2. %politiky%. Potvrzuji, že jsem si pečlivě pročetl/a podmínky zpracování údajů dle Politiky ochrany soukromí a %pravidla% <br>a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
+	back: "zpět"
 
-zastavte se s námi na chvíli...: "Állj meg velünk egy rövid időre, és a karácsony előtti hét mindegyikén gyújts meg egy adventi gyertyát."
-vyhrajte dárkové balíčky NIVEA...: "Nyerd meg az egyedi NIVEA illatú gyertyát vagy a NIVEA ajándékcsomag egyikét"
-s originální NIVEA vuní: "Neked és partnered részére!"
- 
-pokračovat na soutěž: "Tovább"
-
-pole označená * jsou povinná: "A *-al jelölt mezők kitöltése kötelező"
-soutěž_probíhá_od-do: "A nyereményjáték időtartama: 2014. 11.30. és 2014.12.24."
-úplná pravidla soutěže naleznete: "A  teljes játékszabály "
-nejste zaregistrován?: "Nem regisztráltál még?"
-klikněte zde pro registraci a vyhrajte: "A regisztrációhoz kattints ide, és nyerj!"
+	# --- links --- #
+	rules: Pravidla soutěže
+	rules_url: http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info
+	policy: Politiky ochrany soukromí
+	policy_url: http://www.nivea.cz/O-nas/Politika-ochrany-soukromi
 
 
-# --- registration ---
-registrace: REGISZTRÁCIÓ
-text_registrace1: 'Ha szeretnél részt venni a tesztelésben, kérjük, add meg az alábbi adataidat! Kérjük, hogy mielőtt véglegesíted a jelentkezésedet, ellenőrizd le az adataidat és a postázási címet, hogy nyereményed biztosan célba érjen! *<br><br>*Olyan postai címet adj meg, ahová a nyereményedet szeretnéd, hogy kézbesítsük.'
-používáte_výrobky: 'Használsz bármilyen bőrfeszesítő terméket?'
-povinná_pole: "A *-al jelölt mezők kitöltése kötelező"
-
-zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: 'A jelölőnégyzet bejelölésével és az adataim elküldésével önkéntesen hozzájárulok a fenti információk feldolgozásához a promóciós tesztben való részvétel céljából és vonatkozásában. Amennyiben hozzájárulásomat adom ahhoz, hogy a Beiersdorf Kft. részemre e-mail útján kereskedelmi ajánlatokat és információkat küldjön (lásd a második hozzájárulás mezőt), tudomásul veszem, hogy az általam megadott adatok feldolgozása is az Adatkezelési Irányelvek 2. pontjában felsorolt célokra történik. Kijelentem, hogy alaposan elolvastam és megértettem az Adatkezelési Irányelveknek megfelelő adatkezelési feltételeket, a Játékszabályzatot és ezeket elfogadom. Hozzájárulásom visszavonásig érvényes.'
-politiky_ochrany_soukromí: "Politiky ochrany soukromí"
-pravidla_soutěže: "Pravidla soutěže"
-potvrzuji_pečlivé_pročtení: "a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
-a: "a"
-zpet: "vissza"
-datum_narozeni: "születési idő *"
-
-email_již_existuje: 'A megadott e-mail cím már létezik.'
-email_nenalezen: 'az e-mail nem található’'
-email_send: 'az e-mail küldése sikeres volt'
-email_fail: 'az e-mail küldése sikertelen volt'
-
-
-
-
-
-zaregistrujte_se: "Regisztráció"
-popis_registrace: ""
-popis_registrace2: "Kérjük, töltsd ki a regisztráláshoz szükséges kérdőívet, és máris részt vehetsz az  egyedi kivitelezésű NIVEA gyertyáért folyó játékban. A NIVEA ajándékcsomag nyerteseit azon regisztrálók között kerül kisorsolásra, akik mind a 4 adventi gyertyát sikeresen meggyújtották."
-popis_registrace3: "A játék következő fordulójakor elegendő csak az e-mail címet és a jelszót megadni."
-propojit s facebookem: "Bejelentkezés Facebook-on keresztül"
-dokončit: "Meggyújtom a következő gyertyát!"
-akce probíhá od 30.11.2014 do 24.12.2014: "A nyereményjáték időtartama: 2014. 11.30. és 2014.12.27. között.<br>A nyertesek soroslása 2015. január 5-én 11:00 órakor les"
-vaše udaje byly uspěšně uloženy: "AZ ÁLTALAD MEGADOTT ADATOKAT SIKERESEN ELMENTETTÜK!"
-v případě výhry vás budeme kontaktovat na e-mail uvedený ve vaší registraci.: "Amennyiben a szerencsés nyertesek között leszel, a regisztrációkor megadott e-mail címen felvesszük veled a kapcsolatot!"
-politiky ochrany soukromí: ""
-potvrzuji že jsem si pečlivě pročetl...: ""
-pravidla soutěže: ""
-souhlas uděluji na dobu do jeho odvolání.: ""
-
-
-# --- Poděkování ---
-děkujeme: KÖSZÖNJÜK!
-udaje_uloženy: "Sikeresen regisztráltál!"
-odesílací_informace: "Amennyiben a szerencsés tesztelők közé bekerülsz, a regisztráció során megadott e-mail címen fogunk értesíteni."
-děkující_titulek: "FEDEZD FEL A TÖBBI ZUHANYZÁS KÖZBENI TESTÁPOLÓT IS!"
-děkující_popisek: "Válassz a sokféle illat közül, és hozz ki még többet a bőrápolás új és különleges módjából!"
-děkujeme_pokračovat: "TOVÁBB"
-url_pokračovat: "http://www.nivea.hu/A-NIVEA-vilaga/face-care/tips-and-tricks"
-
-
-# --- flashes ---
-facebook authentication failed: "Probléma a Facebook kapcsolattal."
-email from facebook account not found: "A fiók párosításához szükséges Facebook e-mail nem található."
-facebook account not found: "A Facebook fiók nem ltalálható."
-facebook authentication failed hard: "Sorry bro, facebook authentication failed hard."
-vámi zadaná emailová adresa již existuje: "A megadott e-mail cím már létezik."
-
-
-# --- errors ---
-your browser sent a request that this server could not understand or process.: "Your browser sent a request that this server could not understand or process."
-oops: "Oops"
-page Not Found: "Page Not Found"
-the page you requested could not be found...: "The page you requested could not be found. It is possible that the address is incorrect, or that the page no longer exists. Please use a search engine to find what you are looking for."
-server Error: "Server Error"
-the server encountered an internal error: "'We're sorry! The server encountered an internal error and was unable to complete your request. Please try again later."
-
-# --- links ---
-rules_url: "http://www.nivea.hu/A-NIVEA-vilaga/ext/hu-HU/nivea_games_and_rules"
-policy_policy_url: "http://www.nivea.hu/Rolunk/Adatvedelmi-nyilatkozat"
+# --- Poděkování --- #
+thanks:
+	title: "DĚKUJEME, VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY"
+	thank: DĚKUJEME
+	data_saved: VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY.
+	send_info: "V případě, že budete vybrána pro testování, budeme vás kontaktovat na e-mail uvedený při registraci."
+	text1: KRÁSNÝ MAKE-UP PO CELÝ DEN?
+	text2: "Líčení krok za krokem, aby byl výsledek okouzlující a dlouhotrvající."
+	next_url: "http://www.nivea.cz/Vyrobky/Pece-o-telo/Telova-mleka-do-sprchy"
+	continue: "Pokračovat"

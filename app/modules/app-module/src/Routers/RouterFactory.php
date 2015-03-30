@@ -2,7 +2,7 @@
 
 /**
  *
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_02_InShower
  *
  * Copyright (c) 2015
  *
@@ -12,11 +12,9 @@
 
 namespace AppModule\Routers;
 
-use Kdyby\Translation\Translator;
 use Nette,
     Nette\Application\Routers\RouteList,
     Nette\Application\Routers\Route;
-use Tracy\Debugger;
 
 
 /**
@@ -30,8 +28,6 @@ class RouterFactory
     /** @var Nette\Caching\IStorage */
     private $cache;
 
-    /** @var string */
-    private $defaultLang;
 
     /** @var mixed[] */
     public $defaults = array(
@@ -57,11 +53,10 @@ class RouterFactory
     );
 
 
-    function __construct($defaultLang, \Nette\DI\Container $container, \Nette\Caching\IStorage $cache)
+    function __construct(\Nette\DI\Container $container, \Nette\Caching\IStorage $cache)
     {
-        $this->cache       = $cache;
-        $this->container   = $container;
-        $this->defaultLang = $defaultLang;
+        $this->cache     = $cache;
+        $this->container = $container;
     }
 
 
@@ -91,7 +86,7 @@ class RouterFactory
         $languages = $this->defaults['website']['languages'];
         $mask = sprintf("[<locale=%s %s>/]<slug .+>[/<presenter>/<action>[/<id>]]", 'cs', 'cs|en');
 
-        $frontRouter[] = new Route("[<locale={$this->defaultLang} sk|hu|cs>/]<presenter>/<action>[/<id>]", array(
+        $frontRouter[] = new Route('[<locale=cs sk|hu|cs>/]<presenter>/<action>[/<id>]', array(
                 'presenter' => array(
                     Route::VALUE        => 'Homepage',
                     Route::FILTER_TABLE => array(),

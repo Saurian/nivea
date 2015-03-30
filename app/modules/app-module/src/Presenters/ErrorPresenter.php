@@ -2,8 +2,8 @@
 
 namespace App\FrontModule\Presenters;
 
+use AppModule\Presenters\BasePresenter;
 use Nette,
-    App\Model,
     Tracy\Debugger;
 
 

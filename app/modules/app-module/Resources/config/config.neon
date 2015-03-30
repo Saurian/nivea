@@ -1,36 +1,7 @@
 services:
 	authorizator: AppModule\Security\Authorizator
 	authenticator: AppModule\Security\Authenticator(@manager.user)
-	- AppModule\Routers\RouterFactory(%lang%)
-	- CmsModule\Doctrine\Listeners\TablePrefixListener('prefix_')
 	router: @AppModule\Routers\RouterFactory::createRouter
 
-	forms.registrationFormFactory:
-		implement: AppModule\Forms\IRegistrationFormFactory
-		setup:
-			- create
-
-	forms.loginFormFactory:
-		implement: AppModule\Forms\ILoginFormFactory
-		setup:
-			- create
-
-	forms.lostPswFormFactory:
-		implement: AppModule\Forms\ILostPswFormFactory
-		setup:
-			- create
-
-	forms.quizFormFactory:
-		implement: AppModule\Forms\IQuizFormFactory
-		setup:
-			- create
-
-	entities.user: AppModule\Entities\UserEntity
-	entities.question: AppModule\Entities\QuestionEntity
-
-	manager.user: AppModule\Managers\UserManager(@doctrine.dao(@entities.user), @doctrine.dao(@entities.question), %contest%)
+	manager.user: AppModule\Managers\UserManager(@doctrine.dao(AppModule\Entities\UserEntity), @doctrine.dao(AppModule\Entities\QuestionEntity), %contest%)
 	manager.application: AppModule\Managers\ApplicationManager(%contest%)
-
-	listener.transactionListener:
-		class: AppModule\Managers\TransactionListener(%contest%)
-		tags: [kdyby.subscriber]

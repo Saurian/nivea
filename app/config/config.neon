@@ -5,14 +5,14 @@
 # http://nette.org/security-warning
 #
 parameters:
-	lang: sk
+	lang: cs
 	contest:
 		omnitureIframe: false
 		test: true
 		registerFrom: 2015-02-08 # ← datum registrace včetně
 		registerTo: 2016-02-18 # ← datum registrace včetně
 		transaction:
-			name: 2015_02_q10plus
+			name: 2015_04_make_up_starter
 			system: ProCampaign
 			url: "http://news.nivea.%lang%/ProCampaignAPI.aspx"
 			send: true
@@ -57,7 +57,7 @@ extensions:
 	webloader: WebLoader\Nette\Extension
 	modules: Flame\Modules\DI\ModulesExtension
 	doctrineForms: CmsModule\Doctrine\DI\FormsExtension
-	front: AppModule\DI\AppExtension
+	app: AppModule\DI\AppExtension
 
 translation:
 	debugger: on

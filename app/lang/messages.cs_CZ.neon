@@ -1,61 +1,60 @@
-email:
-	sender: 'Nivea soutěž <nivea@info.com>'
-	header: 'Zapomenuté heslo'
-
-vaše_nové_heslo: "Dobrý den,\nvaše nové heslo do Nivea soutěže je %d%"
-
-
-# --- title ---
-title_homepage: "NIVEA zpevnující mléko do sprchy"
-title_registration: "NIVEA registrace"
-title_děkujeme: "DĚKUJEME, VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY"
-
-# --- homepage ---
+# --- homepage --- #
 homepage:
-úvodní_popis: "OTESTUJTE NOVINKU"
-text1: "LEHKÝ ZDOKONALUJÍCÍ KRÉM<br>CELLULAR PERFECT SKIN"
-text2: "Stačí odpovědět na následující otázky:"
+	title: NIVEA Make-up Starter
+	popis: OTESTUJTE LEHKÝ PODKLADOVÝ KRÉM
+	popis2: NIVEA Make-up Starter
 
-chci_testovat: "CHCI TESTOVAT"
-přihláška_do: "Do testování se můžete přihlásit od 30. 1. do 8. 2. 2015."
-úplná_pravidla: "úplná pravidla"
-url_pravidla: "http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info"
+	text1: ZÁKLAD PRO PEFEKTNÍ MAKE-UP
+	text2: "Podkladová báze vyhladí a sjednotí pleť a připraví ji tak pro bezchybné nanesení make-upu. Současně pleti dodá potřebnou dávku hydratace na celý den. Díky ultralehkému složení se vstřebá již během 1 minuty."
+	text3: "<strong>Vyzkoušejte zdarma NIVEA Lehký podkladový krém Make-up Starter</strong>, díky kterému bude váš make-up vypadat lépe a vydrží déle perfektní. Vaši pleť zanechá hydratovanou a hedvábně jemnou."
 
-# --- registration ---
-registrace: REGISTRACE
-text_registrace1: "Chcete-li se zapojit do testování, vyplňte prosím krátký formulář"
-používáte_výrobky: "Používáte výrobky pro zpevnění pokožky?"
-povinná_pole: "Pole označená * jsou povinná.<br>Do testování se můžete přihlásit od 30. 1. do 8. 2. 2015."
+	application_from_to: Do testování se můžete přihlásit od %from% do %to%.
+	chci_testovat: "CHCI TESTOVAT"
+	pravidla: "úplná pravidla"
+	url_pravidla: "http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info"
 
-zaškrtnutím_tohoto_políčka_a_odesláním_formuláře: "Zaškrtnutím tohoto políčka a odesláním formuláře dobrovolně souhlasím, že poskytnuté údaje v rozsahu formuláře budou zpracovány pro účely vyhodnocení soutěže. V případě, že udělím souhlas k zasílání obchodních sdělení - informací e-mailem - viz. druhé políčku souhlasu, tak budou uvedené údaje zpracovány i pro účely stanovené v bodě 2. %politiky_ochrany_soukromí%. Potvrzuji, že jsem si pečlivě pročetl/a podmínky zpracování údajů dle Politiky ochrany soukromí a %pravidla_soutěže% <br>a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
+# --- registration --- #
+registration:
+	title: NIVEA Make-up Starter registrace
+	popis: OTESTUJTE Make-up Starter
+	registrace: REGISTRACE
+	text_registrace1: "Chcete-li se zapojit do testování, vyplňte prosím krátký formulář:"
+	use_product: Jak často používáte make-up?
+	skin_type: Jaký je váš typ pleti?
+
+	required_item: Pole označená * jsou povinná.
+	application_from_to: Do testování se můžete přihlásit od %from% do %to%.
+
+	privacy_info: "Zaškrtnutím tohoto políčka a odesláním formuláře dobrovolně souhlasím, že poskytnuté údaje v rozsahu formuláře budou zpracovány pro účely vyhodnocení soutěže. V případě, že udělím souhlas k zasílání obchodních sdělení - informací e-mailem - viz. druhé políčku souhlasu, tak budou uvedené údaje zpracovány i pro účely stanovené v bodě 2. %politiky%. Potvrzuji, že jsem si pečlivě pročetl/a podmínky zpracování údajů dle Politiky ochrany soukromí a %pravidla% <br>a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
+	back: "zpět"
+
+	# --- links --- #
+	rules: Pravidla soutěže
+	rules_url: http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info
+	policy: Politiky ochrany soukromí
+	policy_url: http://www.nivea.cz/O-nas/Politika-ochrany-soukromi
 
 
-politiky_ochrany_soukromí: "Politiky ochrany soukromí"
-pravidla_soutěže: "Pravidla soutěže"
-potvrzuji_pečlivé_pročtení: "a souhlasím s nimi. Souhlas uděluji na dobu do jeho odvolání."
-a: "a"
-zpet: "zpět"
+# --- Poděkování --- #
+thanks:
+	title: "DĚKUJEME, VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY"
+	thank: DĚKUJEME
+	data_saved: VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY.
+	send_info: "V případě, že budete vybrána pro testování, budeme vás kontaktovat na e-mail uvedený při registraci."
+	text1: KRÁSNÝ MAKE-UP PO CELÝ DEN?
+	text2: "Líčení krok za krokem, aby byl výsledek okouzlující a dlouhotrvající."
+	next_url: "http://www.nivea.cz/Vyrobky/Pece-o-telo/Telova-mleka-do-sprchy"
+	continue: "Pokračovat"
+
+
+# --- other --- #
 datum_narozeni: "datum narození"
-
-email_již_existuje: 'Vámi zadaná emailová adresa již existuje'
+email_exist: "Vámi zadaná emailová adresa již existuje"
 email_nenalezen: 'e-mail nebyl nalezen'
 email_send: 'e-mail byl odeslán'
 email_fail: 'e-mail se nepodařilo odeslat'
 
-# --- Poděkování ---
-děkujeme: DĚKUJEME
-udaje_uloženy: "VAŠE ÚDAJE BYLY ÚSPĚŠNĚ ULOŽENY."
-odesílací_informace: "V případě, že budete vybrána pro testování, budeme vás kontaktovat na e-mail uvedený při registraci."
-děkující_titulek: "OBJEVTE DALŠÍ VARIANTY TĚLOVÉHO MLÉKA DO SPRCHY"
-děkující_popisek: "Nový snadný způsob péče o pokožku si můžete užít hned v několika voňavých variantách."
-děkujeme_pokračovat: "Pokračovat"
-url_pokračovat: "http://www.nivea.cz/Vyrobky/Pece-o-telo/Telova-mleka-do-sprchy"
-
-
-vámi zadaná emailová adresa již existuje: "Vámi zadaná emailová adresa již existuje"
-
-
-# --- errors ---
+# --- errors --- #
 your browser sent a request that this server could not understand or process.: "Your browser sent a request that this server could not understand or process."
 oops: "Oops"
 page Not Found: "Page Not Found"
@@ -63,6 +62,3 @@ the page you requested could not be found...: "The page you requested could not 
 server Error: "Server Error"
 the server encountered an internal error: "'We're sorry! The server encountered an internal error and was unable to complete your request. Please try again later."
 
-# --- links ---
-rules_url: "http://www.nivea.cz/Tipy-and-rady/ext/cz-CZ/2011_06_vyherci_info"
-policy_policy_url: "http://www.nivea.cz/O-nas/Politika-ochrany-soukromi"

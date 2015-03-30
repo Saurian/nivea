@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_02_InShower
  * Copyright (c) 2015
  *
  * @file    TransactionListener.php
@@ -189,22 +189,22 @@ class TransactionListener extends Object implements Subscriber
 
     public function updateTransactionDate()
     {
-        $this->transAttributes[self::KEY_CREATED] = date('Y-m-d H:i:s');
+        $this->transAttributes[self::KEY_CREATED] = date('Y-m-d');
     }
 
 
     private function updateTransAttributes(QuestionEntity $question)
     {
-        if ($question->getQuizOne()) {
+        if (NULL !== $question->getQuizOne()) {
             $this->transAttributes[self::KEY_Q1] = $question->getQuizOne();
         }
-        if ($question->getQuizTwo()) {
+        if (NULL !== $question->getQuizTwo()) {
             $this->transAttributes[self::KEY_Q2] = $question->getQuizTwo();
         }
-        if ($question->getQuizThree()) {
+        if (NULL !== $question->getQuizThree()) {
             $this->transAttributes[self::KEY_Q3] = $question->getQuizThree();
         }
-        if ($question->getQuizFour()) {
+        if (NULL !== $question->getQuizFour()) {
             $this->transAttributes[self::KEY_Q4] = $question->getQuizFour();
         }
     }
@@ -226,7 +226,7 @@ class TransactionListener extends Object implements Subscriber
 
     private function createRequest()
     {
-        $url    = $this->contest['transaction']['url'];
+        $url    = str_replace('.cs', '.cz', $this->contest['transaction']['url']);
         $name   = $this->contest['transaction']['name'];
         $system = $this->contest['transaction']['system'];
 
@@ -282,7 +282,8 @@ class TransactionListener extends Object implements Subscriber
             $sender      = isset($this->userAttributes[self::KEY_EMAIL]) ? $this->userAttributes[self::KEY_EMAIL] : 'unknown';
             $extResponse = isset($response['@attributes']) ? $response['@attributes'] : $response;
             \Tracy\Debugger::log($sender . ' -request- ' . $result, self::KEY_LOGGER);
-            \Tracy\Debugger::log($sender . ' -response- ' . implode(',', $extResponse), self::KEY_LOGGER);
+            $out = is_array($extResponse) ? implode(',', $extResponse) : $extResponse;
+            \Tracy\Debugger::log($sender . ' -response- ' . $out, self::KEY_LOGGER);
             Debugger::barDump($result, 'result');
             Debugger::barDump($extResponse, 'response');
         }

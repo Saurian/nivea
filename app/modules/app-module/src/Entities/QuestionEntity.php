@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the 2015_02_Q10Plus
+ * This file is part of the 2015_02_InShower
  * Copyright (c) 2015
  *
  * @file    QuestionEntity.php
@@ -10,7 +10,7 @@
 namespace AppModule\Entities;
 
 use Doctrine\ORM\Mapping as ORM;
-use Kdyby\Translation\Translator;
+use Nette\DI\Container;
 use Nette\Object;
 use Nette\Utils\DateTime;
 
@@ -25,6 +25,10 @@ use Nette\Utils\DateTime;
 class QuestionEntity extends Object
 {
     use \CmsModule\Doctrine\Entities\IdentifiedEntityTrait;
+
+    /** @var TransactionManager */
+    public $transactionManager;
+
 
     /**
      * @var UserEntity
@@ -58,12 +62,6 @@ class QuestionEntity extends Object
     protected $quizFour;
 
     /**
-     * @var string
-     * @ORM\Column(type="string", length=2)
-     */
-    protected $lang;
-
-    /**
      * @var DateTime
      * @ORM\Column(type="datetime", nullable=true)
      */
@@ -76,13 +74,15 @@ class QuestionEntity extends Object
     protected $updated;
 
 
-
     /**
      * @param string $quizFour
+     *
+     * @return $this
      */
     public function setQuizFour($quizFour)
     {
         $this->quizFour = $quizFour;
+        return $this;
     }
 
     /**
@@ -95,10 +95,13 @@ class QuestionEntity extends Object
 
     /**
      * @param string $quizOne
+     *
+     * @return $this
      */
     public function setQuizOne($quizOne)
     {
         $this->quizOne = $quizOne;
+        return $this;
     }
 
     /**
@@ -111,10 +114,13 @@ class QuestionEntity extends Object
 
     /**
      * @param string $quizTree
+     *
+     * @return $this
      */
     public function setQuizThree($quizTree)
     {
         $this->quizThree = $quizTree;
+        return $this;
     }
 
     /**
@@ -127,10 +133,13 @@ class QuestionEntity extends Object
 
     /**
      * @param string $quizTwo
+     *
+     * @return $this
      */
     public function setQuizTwo($quizTwo)
     {
         $this->quizTwo = $quizTwo;
+        return $this;
     }
 
     /**
@@ -143,10 +152,13 @@ class QuestionEntity extends Object
 
     /**
      * @param \AppModule\Entities\UserEntity $user
+     *
+     * @return $this
      */
     public function setUser(UserEntity $user)
     {
         $this->user = $user;
+        return $this;
     }
 
     /**
@@ -157,24 +169,6 @@ class QuestionEntity extends Object
         return $this->user;
     }
 
-    /**
-     * @return string
-     */
-    public function getLang()
-    {
-        return $this->lang;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        $this->lang = $lang;
-        return $this;
-    }
 
     /**
      * @ORM\PrePersist
@@ -182,7 +176,6 @@ class QuestionEntity extends Object
     public function onPrePersist()
     {
         $this->created = new DateTime();
-        $this->updated = $this->created;
     }
 
 
@@ -194,31 +187,5 @@ class QuestionEntity extends Object
         $this->updated = new DateTime();
     }
 
-
-    public function getQuizesSet()
-    {
-        return intval($this->quizOne == true) +
-            intval($this->quizTwo == true) +
-            intval($this->quizThree == true) +
-            intval($this->quizFour == true);
-    }
-
-
-    public function getNextQuiz()
-    {
-        if (($result = intval($this->quizOne == true)) != 1) {
-            return $result;
-        }
-        if (($result += intval($this->quizOne == true && $this->quizTwo == true)) != 2) {
-            return $result;
-        }
-        if (($result += intval($this->quizOne == true && $this->quizTwo == true && $this->quizThree == true)) != 3) {
-            return $result;
-        }
-        if (($result += intval($this->quizOne == true && $this->quizTwo == true && $this->quizThree == true && $this->quizFour == true)) != 4) {
-            return $result;
-        }
-        return 0;
-    }
 
 }
