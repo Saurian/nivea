@@ -1,9 +1,8 @@
 /**
- * This file is part of the vanocni_soutez
+ * This file is part of the make_up_starter
  * Copyright (c) 2014
  *
  * @file    track.js
- * @author  Pavel Paulík <pavel.paulik1@gmail.com>
  */
 
 (function ($) {
@@ -22,10 +21,10 @@
         }
     });
 
-    $('form').find('.next').click(function() {
+    $('form').find('.next').click(function () {
         var form = $(this).closest('form').attr('name');
         var name = $(this).attr('name');
-        if (form !== undefined && name !== undefined ) {
+        if (form !== undefined && name !== undefined) {
             Omniture.trackNOPV(form + '-' + name);
         }
     });

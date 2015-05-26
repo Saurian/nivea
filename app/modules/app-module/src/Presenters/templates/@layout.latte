@@ -21,6 +21,8 @@
 	<![endif]-->
 
 	<script src="{$basePath}/js/jquery.1.8.2.min.js"></script>
+	<script n:if="$omnitureIframe" src="http://www.nivea.{$locale}/js/nivea_omniture_iframe.js"></script>
+	<script n:if="$omnitureIframe" type="text/javascript">Omniture.trackSubPageView('{!$page}');</script>
 	{block head}{/block}
 </head>
 
@@ -41,8 +43,6 @@
 		<script src="{$basePath}/js/select2.js"></script>
 		<script src="{$basePath}/js/placeholders.min.js"></script>
 		<script src="{$basePath}/js/application.js"></script>
-		<script n:if="$omnitureIframe" src="http://www.nivea.{$locale}/js/nivea_omniture_iframe.js"></script>
-		<script n:if="$omnitureIframe" type="text/javascript">Omniture.trackSubPageView('{!$page}');</script>
 		<script n:if="$omnitureIframe" src="{$basePath}/js/track.js"></script>
 	{/block}
 </body>

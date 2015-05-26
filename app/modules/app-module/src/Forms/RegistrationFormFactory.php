@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This file is part of the 2015_02_InShower
+ * This file is part of the 2015_04_makeUP_starter
  *
  * Copyright (c) 2015
  *
@@ -30,7 +30,7 @@ interface IRegistrationFormFactory
 
 class RegistrationFormFactory extends BasicForm implements IRegistrationFormFactory
 {
-    const MIN_YEARS = 16;
+    const MIN_YEARS = 18;
 
     protected $redirect = 'Registration:thanks';
 
@@ -71,7 +71,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             'lessOften' => 'less_often',
             'notUse' => 'not_use'))
             ->addRule(Form::FILLED, 'select_use_makeup')
-            ->setAttribute("tabindex",0)
+//            ->setAttribute("tabindex",0)
             ->controlPrototype->class = 'inline-item track';
 
         $this->addRadioList('skin_type', 'skin_type', array(
@@ -159,6 +159,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             ->setTranslator(null)
             ->setAttribute("tabindex",7)
             ->setAttribute('placeholder', 'den')
+            ->addRule(Form::FILLED, 'vyplňte_den_narození_správně')
             ->addCondition(Form::FILLED)
             ->addRule(Form::RANGE, 'vyplňte_den_narození_správně', array(1,31));
         $this['day']->controlPrototype->class = 'select-day';
@@ -171,6 +172,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             ->setPrompt($this->translator->translate('forms.registrationForm.měsíc'))
             ->setTranslator(null)
             ->setAttribute("tabindex",8)
+            ->addRule(Form::FILLED, 'vyplňte_měsíc_narození_správně')
             ->addCondition(Form::FILLED)
             ->addRule(Form::RANGE, 'vyplňte_měsíc_narození_správně', array(1,12));
         $this['month']->controlPrototype->class = 'select-month';
@@ -184,6 +186,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
             ->setPrompt($this->translator->translate('forms.registrationForm.rok'))
             ->setTranslator(null)
             ->setAttribute("tabindex",9)
+            ->addRule(Form::FILLED, 'musíte_být_starší_x_let')
             ->addCondition(Form::FILLED)
             ->addRule(Form::RANGE, 'musíte_být_starší_x_let', array(null, $currentYear - self::MIN_YEARS));
         $this['year']->controlPrototype->class = 'select-year';
@@ -210,7 +213,7 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
         $btn->create('strong class="space"');
 
         $this->onSuccess[] = array($this, 'processRegistrationForm');
-        $this->getElementPrototype()->class = 'registration-form';
+        $this->getElementPrototype()->addAttributes(['name' => 'registration'])->class = 'registration-form';;
 
     }
 
