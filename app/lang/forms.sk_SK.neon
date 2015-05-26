@@ -1,3 +1,13 @@
+quizForm:
+	otazka1: "Otázka 1 (forms - jazyk - quizForm) slovenčina"
+	otazka2: "Otázka 2 (forms - jazyk - quizForm)"
+	otazka3: "Otázka 3 (forms - jazyk - quizForm)"
+	next: Pokračovat
+	tato_polozka_je_povinna: Tato položka je povinná
+	spatna_odpoved: Toto je špatná odpověď
+
+
+
 registrationForm:
 	vyplňte_jednu_možnost: 'Prosím, vyplňte jednu možnost.'
 	odeslat: 'ODOSLAŤ'

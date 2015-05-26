@@ -76,6 +76,10 @@ class AppExtension extends CompilerExtension
             ->setImplement('AppModule\Forms\ILostPswFormFactory')
             ->addSetup('create');
 
+        $builder->addDefinition($this->prefix('forms.quizFormFactory'))
+            ->setImplement('AppModule\Forms\IQuizFormFactory')
+            ->addSetup('create');
+
         // routers
         $builder->addDefinition($this->prefix('router.default'))
             ->setClass('AppModule\Routers\RouterFactory');

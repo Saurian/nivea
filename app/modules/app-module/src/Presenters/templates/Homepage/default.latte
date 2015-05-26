@@ -7,9 +7,24 @@
 <h1><strong>{_messages.homepage.popis}</strong>{_messages.homepage.popis2}</h1>
 <p><strong>{_messages.homepage.text1}</strong></p>
 
+{form quizForm}
+	<div class="question-item">
+		<strong>{label quizOne /}</strong>
+		{foreach $form['quizOne']->items as $key => $label}
+			<div class="form-row">
+				<label n:name="quizOne:$key">
+					<input n:name="quizOne:$key">
+					<strong class="question-text-block"><span class="question-text-block">{_forms.quizForm.$label}</span></strong>
+				</label>
+			</div>
+		{/foreach}
+	</div>
+
+	<div n:if="$canRegister">{input send}</div>
+{/form}
+
 <p>{!_messages.homepage.text2}</p>
 <p>{!_messages.homepage.text3}</p>
 
-<a n:href="Registration:" class="button track-btn" data-name="test-click"><strong>{_messages.homepage.chci_testovat}</strong></a>
 <p class="info">{_messages.homepage.application_from_to, ['from' => $from, 'to' => $to]}</p>
 <a target="_blank" href="{!$url}" class="button-secondary track-external" data-url="{!$url}">{_messages.homepage.pravidla}</a>

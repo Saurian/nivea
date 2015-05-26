@@ -16,30 +16,6 @@
 	{form registrationForm}
 		<fieldset class="register">
 			<div class="clearfix form-row">
-				<div class="row-col half">{_messages.registration.use_product}</div>
-				<div class="row-col half">
-					{foreach $form['use_makeup']->items as $key => $label}
-					<div class="block-inline">
-						<input n:name="use_makeup:$key">
-						<label n:name="use_makeup:$key">{_forms.registrationForm.$label}</label>
-					</div>
-					{/foreach}
-				</div>
-			</div>
-
-			<div class="clearfix form-row">
-				<div class="row-col half">{_messages.registration.skin_type}</div>
-				<div class="row-col half">
-					{foreach $form['skin_type']->items as $key => $label}
-					<div class="block-inline">
-						<input n:name="skin_type:$key">
-						<label n:name="skin_type:$key">{_forms.registrationForm.$label}</label>
-					</div>
-					{/foreach}
-				</div>
-			</div>
-
-			<div class="clearfix form-row">
 				{foreach $form['gender']->items as $key => $label}
 					<div class="row-col">
 						<div class="block-inline no-margin">

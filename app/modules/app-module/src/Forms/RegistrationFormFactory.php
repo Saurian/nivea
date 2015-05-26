@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This file is part of the 2015_04_makeUP_starter
+ * This file is part of the 2015_05_protect_and_bronze
  *
  * Copyright (c) 2015
  *
@@ -63,23 +63,6 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
     function create()
     {
         $this->addGroup();
-
-        $this->addRadioList('use_makeup', 'use_makeup', array(
-            'everyDay' => 'every_day',
-            'severalWeek' => 'several_times_a_week',
-            'severalMonth' => 'several_times_a_month',
-            'lessOften' => 'less_often',
-            'notUse' => 'not_use'))
-            ->addRule(Form::FILLED, 'select_use_makeup')
-//            ->setAttribute("tabindex",0)
-            ->controlPrototype->class = 'inline-item track';
-
-        $this->addRadioList('skin_type', 'skin_type', array(
-            'drySensitive' => 'dry_sensitive',
-            'normal' => 'normal'))
-            ->addRule(Form::FILLED, 'select_skin')
-            ->setAttribute("tabindex",1)
-            ->controlPrototype->class = 'inline-item track';
 
         $this->addRadioList('gender', 'pohlaví', array(0 => 'žena', 1 => 'muž'))
             ->setValue(0)
@@ -220,16 +203,22 @@ class RegistrationFormFactory extends BasicForm implements IRegistrationFormFact
 
     public function processRegistrationForm(BasicForm $form)
     {
-        $values = $form->getValues();
         $presenter = $this->getPresenter();
+        $section = $presenter->getSession($this->section);
 
         /** @var $entity UserEntity */
         $entity = $this->entity;
 
-        if (($questions = $entity->questions) === NULL) {
+        if (($questions = $entity->getQuestions()) === NULL) {
             $questions = new QuestionEntity();
-            $questions->setQuizOne($values->use_makeup)->setQuizTwo($values->skin_type);
         }
+
+        foreach ($section as $key => $val) {
+            if (isset($questions->$key)) {
+                $questions->$key = $val;
+            }
+        }
+
         $entity->setQuestions($questions);
 
         try {

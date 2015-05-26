@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the 2015_04_makeUP_starter
+ * This file is part of the 2015_05_protect_and_bronze
  * Copyright (c) 2015
  *
  * @file    TransactionListener.php
@@ -189,7 +189,7 @@ class TransactionListener extends Object implements Subscriber
 
     public function updateTransactionDate()
     {
-        $this->transAttributes[self::KEY_CREATED] = date('Y-m-d');
+        $this->transAttributes[self::KEY_CREATED] = date('Y-m-d H:i:s');
     }
 
 

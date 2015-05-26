@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the 2015_04_makeUP_starter
+ * This file is part of the 2015_05_protect_and_bronze
  * Copyright (c) 2015
  *
  * @file    QuestionEntity.php
@@ -175,7 +175,7 @@ class QuestionEntity extends Object
      */
     public function onPrePersist()
     {
-        $this->created = new DateTime();
+        $this->created = $this->updated = new DateTime();
     }
 
 

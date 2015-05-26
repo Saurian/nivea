@@ -1,6 +1,6 @@
 {
-    "name": "pixman/nivea-2015-04-make_up_starter",
-    "description": "Nivea Make Up Starter",
+    "name": "pixman/nivea-2015-05-protect_and_bronze",
+    "description": "Nivea Protect and Bronze",
     "minimum-stability": "stable",
     "keywords": ["devrun"],
     "license": "proprietary",
@@ -14,6 +14,7 @@
         "nette/nette": "~2.3.0",
         "kdyby/doctrine": "v2.1.0",
         "kdyby/translation": "v2.0.3",
+        "kdyby/nette-session-panel": "v3.2.0",
         "janmarek/webloader": "2.2.0",
         "dg/adminer-custom": "v1.4.0",
         "flame/framework": "dev-master",
